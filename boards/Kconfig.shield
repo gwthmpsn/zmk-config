@@ -1,5 +1,5 @@
-config SHIELD_TRACTYL_MANUFORM_4X5_LEFT
-    def_bool $(shields_list_contains,tractyl_manuform_4x5_left)
+config SHIELD_ECLIPTIC_LEFT
+    def_bool $(shields_list_contains,ecliptic_left)
 
-config SHIELD_TRACTYL_MANUFORM_4X5_RIGHT
-    def_bool $(shields_list_contains,tractyl_manuform_4x5_right)
+config SHIELD_ECLIPTIC_RIGHT
+    def_bool $(shields_list_contains,ecliptic_right)
