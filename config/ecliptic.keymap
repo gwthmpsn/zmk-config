@@ -16,11 +16,95 @@
         tapping-term-ms = <200>;
         bindings = <&mo>, <&tog>;
         };
+    R0C1: R0C1 { 								// #$
+        compatible = "zmk,behavior-mod-morph";
+        label = "R0C1";
+        #binding-cells = <0>;
+        bindings = <&kp HASH>, <&kp DOLLAR>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    R0C2: R0C2 { 								// { /
+        compatible = "zmk,behavior-mod-morph";
+        label = "R0C2";
+        #binding-cells = <0>;
+        bindings = <&kp LBRC>, <&kp FSLH>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    R0C3: R0C3 { 								// } \
+        compatible = "zmk,behavior-mod-morph";
+        label = "R0C3";
+        #binding-cells = <0>;
+        bindings = <&kp RBRC>, <&kp BSLH>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    R0C4: R0C4 {								// < >
+        compatible = "zmk,behavior-mod-morph";
+        label = "R0C4";
+        #binding-cells = <0>;
+        bindings = <&kp LT>, <&kp GT>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    R1C0: R1C0 {								// & @
+        compatible = "zmk,behavior-mod-morph";
+        label = "R1C0";
+        #binding-cells = <0>;
+        bindings = <&kp AMPS>, <&kp AT>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    R1C1: R1C1 {								// ! ?
+        compatible = "zmk,behavior-mod-morph";
+        label = "R1C1";
+        #binding-cells = <0>;
+        bindings = <&kp EXCL>, <&kp QMARK>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    R1C2: R1C2 {								// ( -
+        compatible = "zmk,behavior-mod-morph";
+        label = "R1C2";
+        #binding-cells = <0>;
+        bindings = <&kp LPAR>, <&kp MINUS>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    R1C3: R1C3 {								// ) +
+        compatible = "zmk,behavior-mod-morph";
+        label = "R1C3";
+        #binding-cells = <0>;
+        bindings = <&kp RPAR>, <&kp PLUS>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     R1C4: R1C4 { 								// .,
         compatible = "zmk,behavior-mod-morph";
         label = "R1C4";
         #binding-cells = <0>;
         bindings = <&kp PERIOD>, <&kp COMMA>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    R2C0: R2C0 {								// _ |
+        compatible = "zmk,behavior-mod-morph";
+        label = "R2C0";
+        #binding-cells = <0>;
+        bindings = <&kp UNDER>, <&kp PIPE>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    R2C1: R2C1 {								// % ^
+        compatible = "zmk,behavior-mod-morph";
+        label = "R2C1";
+        #binding-cells = <0>;
+        bindings = <&kp PRCNT>, <&kp CARET>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    R2C3: R2C3 {								// [ *
+        compatible = "zmk,behavior-mod-morph";
+        label = "R2C3";
+        #binding-cells = <0>;
+        bindings = <&kp LBKT>, <&kp ASTR>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    R2C4: R2C4 {								// ] =
+        compatible = "zmk,behavior-mod-morph";
+        label = "R0C1";
+        #binding-cells = <0>;
+        bindings = <&kp RBKT>, <&kp EQUAL>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
