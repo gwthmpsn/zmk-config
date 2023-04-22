@@ -212,8 +212,8 @@
     &kp Z     &kp X    &kp V     &kp K     &kp SEMI                       &kp R     &kp M     &kp F 	&kp P  	  &mo_tog 2 2
               &kp TAB  &kp ESC                                                                &kp LWIN  &kp K_CONTEXT_MENU
                                  &kp LSHFT &kp SPACE                   	  &none     &kp RSHFT
-                                           &mo_tog 1 1 &kp LALT  &none    &mo_tog 1 1
-                                           &kp LCTRL   &kp ENTER &kp BSPC &kp DEL
+                                           &mo_tog 1 1 &kp ENTER &none   &mo_tog 1 1
+                                           &kp LALT   &kp LCTRL  &kp DEL &kp BSPC
             >;
         };
 
