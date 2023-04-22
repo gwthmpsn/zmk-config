@@ -12,21 +12,21 @@
 
         default_layer {
 // -------------------------------------------------------------------------------------------------------------------------
-// |    Q    |    W    |    E    |    R    |    T    |                   |    Y    |    U    |    I    |    O    |    P    |
-// |    A    |    S    |    D    |    F    |    G    |                   |    H    |    J    |    K    |    L    |    ;    |
-// |    Z    |    X    |    C    |    V    |    B    |                   |    N    |    M    |    ,    |    .    |    /    |
-//           |    [    |    ]    |                                                           |    -    |    =    |
-//                               |ESC+SHFT |BS + CTRL|                   |SPC + ALT|ENTR+SHFT|
-//                                         |   TAB   |   HOME  |   END   |   DEL   |
-//                                         |  Raise  |    ~    |   GUI   |  Lower  |
+// |    B    |    Y    |    O    |    U    |    '    |                   |    L    |    D    |    W    |    G    |    Q    |
+// |    C    |    I    |    E    |    A    |    .,   |                   |    H    |    T    |    S    |    N    |    J    |
+// |    Z    |    X    |    V    |    K    |    ;    |                   |    R    |    M    |    F    |    P    |   {2}   |
+//           |   TAB   |    ESC  |                                                           |   WIN   |   CTX   |
+//                               |   LSHFT |  SPACE  |                   |SPC + ALT|ENTR+SHFT|
+//                                         |  LCTRL  |   LALT  |  BSPC   |   DEL   |
+//                                         |  Raise  |   ENTER |   GUI   |  Lower  |
             bindings = <
-    &kp Q     &kp W    &kp E     &kp R     &kp T                          &kp Y     &kp U     &kp I     &kp O     &kp P
-    &kp A     &kp S    &kp D     &kp F     &kp G                          &kp H     &kp J     &kp K     &kp L     &kp SEMI
-    &kp Z     &kp X    &kp C     &kp V     &kp B                          &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH
-              &kp LBKT &kp RBKT                                                               &kp MINUS  &kp EQUAL
-                                 &mt LSHFT ESC &mt LCTRL BSPC                   &mt LALT SPACE &mt LSHFT ENTER
-                                            &kp TAB  &kp HOME  &kp END    &kp DEL
-                                           &mo RAISE &kp GRAVE &kp LGUI   &mo LOWER
+    &kp B     &kp Y    &kp O     &kp U     &kp APOS                       &kp L     &kp D     &kp W     &kp G     &kp Q
+    &kp C     &kp I    &kp E     &kp A     &R1C4                       	  &kp H     &kp T     &kp S     &kp N     &kp J
+    &kp Z     &kp X    &kp V     &kp K     &kp SEMI                       &kp R     &kp M     &kp F 	&kp P  	  &kp TILDE
+              &kp TAB  &kp ESC                                                                &kp LWIN  &kp K_CONTEXT_MENU
+                                 &mt LSHFT &mt SPACE                   	  &kp RSHFT &kp TILDE
+                                           &kp LCTRL &kp LALT  &kp TILDE  &kp TILDE
+                                           &kp TILDE &kp ENTER &kp BSPC   &kp DEL
             >;
         };
 
