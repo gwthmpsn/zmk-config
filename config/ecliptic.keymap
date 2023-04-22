@@ -93,16 +93,16 @@
         bindings = <&kp PRCNT>, <&kp CARET>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    R2C3: R2C3 {								// [ *
+    R2C2: R2C2 {								// [ *
         compatible = "zmk,behavior-mod-morph";
-        label = "R2C3";
+        label = "R2C2";
         #binding-cells = <0>;
         bindings = <&kp LBKT>, <&kp ASTRK>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    R2C4: R2C4 {								// ] =
+    R2C3: R2C3 {								// ] =
         compatible = "zmk,behavior-mod-morph";
-        label = "R0C1";
+        label = "R2C3";
         #binding-cells = <0>;
         bindings = <&kp RBKT>, <&kp EQUAL>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
