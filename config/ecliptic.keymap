@@ -128,6 +128,13 @@
         bindings = <&kp KP_N9>, <&kp F9>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+    R0C9: R0C9 {								// none F10
+        compatible = "zmk,behavior-mod-morph";
+        label = "R0C9";
+        #binding-cells = <0>;
+        bindings = <&none>, <&kp F10>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     R1C6: R1C6 {								// 4 F4
         compatible = "zmk,behavior-mod-morph";
         label = "R1C6";
@@ -147,6 +154,13 @@
         label = "R1C8";
         #binding-cells = <0>;
         bindings = <&kp KP_N6>, <&kp F6>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    R1C9: R1C9 {								// none F11
+        compatible = "zmk,behavior-mod-morph";
+        label = "R1C9";
+        #binding-cells = <0>;
+        bindings = <&none>, <&kp F11>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     R2C6: R2C6 {								// 1 F1
