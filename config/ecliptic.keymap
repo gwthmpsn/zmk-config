@@ -79,34 +79,6 @@
         bindings = <&kp PERIOD>, <&kp COMMA>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    R2C0: R2C0 {								// _ |
-        compatible = "zmk,behavior-mod-morph";
-        label = "R2C0";
-        #binding-cells = <0>;
-        bindings = <&kp UNDER>, <&kp PIPE>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R2C1: R2C1 {								// % ^
-        compatible = "zmk,behavior-mod-morph";
-        label = "R2C1";
-        #binding-cells = <0>;
-        bindings = <&kp PRCNT>, <&kp CARET>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R2C3: R2C3 {								// [ *
-        compatible = "zmk,behavior-mod-morph";
-        label = "R2C3";
-        #binding-cells = <0>;
-        bindings = <&kp LBKT>, <&kp ASTR>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R2C4: R2C4 {								// ] =
-        compatible = "zmk,behavior-mod-morph";
-        label = "R0C1";
-        #binding-cells = <0>;
-        bindings = <&kp RBKT>, <&kp EQUAL>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 
 
