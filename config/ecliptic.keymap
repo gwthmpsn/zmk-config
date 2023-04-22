@@ -24,7 +24,7 @@
     &kp C     &kp I    &kp E     &kp A     &kp COMMA                   	  &kp H     &kp T     &kp S     &kp N     &kp J
     &kp Z     &kp X    &kp V     &kp K     &kp SEMI                       &kp R     &kp M     &kp F 	&kp P  	  &kp TILDE
               &kp TAB  &kp ESC                                                                &kp LWIN  &kp K_CONTEXT_MENU
-                                 &mt LSHFT &mt SPACE                   	  &kp RSHFT &kp TILDE
+                                 &kp LSHFT &kp SPACE                   	  &kp RSHFT &kp TILDE
                                            &kp LCTRL &kp LALT  &kp TILDE  &kp TILDE
                                            &kp TILDE &kp ENTER &kp BSPC   &kp DEL
             >;
