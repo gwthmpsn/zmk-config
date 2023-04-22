@@ -4,6 +4,7 @@
 
 #define DEFAULT 0
 
+/ {
     keymap {
         compatible = "zmk,keymap";
 
@@ -26,5 +27,5 @@
                                            &kp TILDE &kp ENTER &kp BSPC   &kp DEL
             >;
         };
-
+    };
 };
