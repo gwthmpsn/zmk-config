@@ -21,7 +21,7 @@
 //                                         |  Raise  |   ENTER |   GUI   |  Lower  |
             bindings = <
     &kp B     &kp Y    &kp O     &kp U     &kp APOS                       &kp L     &kp D     &kp W     &kp G     &kp Q
-    &kp C     &kp I    &kp E     &kp A     &R1C4                       	  &kp H     &kp T     &kp S     &kp N     &kp J
+    &kp C     &kp I    &kp E     &kp A     &kp COMMA                   	  &kp H     &kp T     &kp S     &kp N     &kp J
     &kp Z     &kp X    &kp V     &kp K     &kp SEMI                       &kp R     &kp M     &kp F 	&kp P  	  &kp TILDE
               &kp TAB  &kp ESC                                                                &kp LWIN  &kp K_CONTEXT_MENU
                                  &mt LSHFT &mt SPACE                   	  &kp RSHFT &kp TILDE
