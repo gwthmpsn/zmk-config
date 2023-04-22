@@ -34,7 +34,7 @@
         compatible = "zmk,behavior-mod-morph";
         label = "R0C3";
         #binding-cells = <0>;
-        bindings = <&kp LBRC>, <&kp BSLH>;
+        bindings = <&kp LBRC>, <&kp FSLH>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     R0C4: R0C4 {								// < >
