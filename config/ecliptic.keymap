@@ -231,7 +231,7 @@ bindings = <
 
         lower {
             bindings = <
-    &trans 	  &trans    &trans    &trans    &trans                        &kp PG_UP  &kp HOME &kp UP    &none     &none 
+    &trans 	  &trans    &trans    &trans    &trans                        &kp PG_UP  &kp HOME &kp UP    &none     &bt BT_CLR 
     &trans    &trans    &trans    &trans    &trans                        &kp LEFT   &none    &none     &kp RIGHT &none 
     &trans    &trans    &trans    &trans    &trans                        &kp PG_DN  &kp END  &kp DOWN  &none     &to(0) 
               &trans    &trans                                                                &trans    &trans
