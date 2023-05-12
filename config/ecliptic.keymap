@@ -55,7 +55,7 @@
         };	
 	R0C8: R0C8 {								// 9 =
 		compatible = "zmk,behavior-mod-morph";
-		label = "R3C5";
+		label = "R0C8";
 		#binding-cells = <0>;
 		bindings = <&kp KP_N9>, <&kp KP_EQUAL>;
 		mods = <(MOD_LSFT|MOD_RSFT)>;
