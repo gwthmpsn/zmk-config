@@ -81,7 +81,7 @@
               &none    &none                                                                  &none  	&none
                                &lt FXN ESC &lt NAV SPACE                  &none     &kp ENTER
                                            &none 	 &kp LSHFT  &none     &R3C5
-                                           &to(5) 	 &to(4)      &to(0)     &mo_tog 1 1
+                                           &to(5) 	 &to(4)    &mo_tog 1 1  &to(0)     
             >;
         };
 
