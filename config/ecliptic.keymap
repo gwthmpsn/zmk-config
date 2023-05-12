@@ -48,17 +48,17 @@
         };	
 	R0C7: R0C7 {								// 8 deg
         compatible = "zmk,behavior-mod-morph";
-        label = "R3C5";
+        label = "R0C7";
         #binding-cells = <0>;
         bindings = <&kp KP_N8>, <&deg>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
         };	
 	R0C8: R0C8 {								// 9 =
-		compatible = "zmk,behavior-mod-morph";
-		label = "R0C8";
-		#binding-cells = <0>;
-		bindings = <&kp KP_N9>, <&kp KP_EQUAL>;
-		mods = <(MOD_LSFT|MOD_RSFT)>;
+	compatible = "zmk,behavior-mod-morph";
+	label = "R0C8";
+	#binding-cells = <0>;
+	bindings = <&kp KP_N9>, <&kp KP_EQUAL>;
+	mods = <(MOD_LSFT|MOD_RSFT)>;
         };	
     };
 
