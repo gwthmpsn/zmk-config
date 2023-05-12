@@ -11,15 +11,66 @@
 // Would love to have a greek layer :(
 
 / {
-	macros {
+     macros {
 	deg: deg {
 	    label = "deg";
 	    compatible = "zmk,behavior-macro";
 	    #binding-cells = <0>;
 	    bindings
-				= <&macro_press   &kp LALT>
+				= <&macro_release &kp LSHFT>
+				, <&macro_press   &kp LALT>
 				, <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N6>
 				, <&macro_release &kp LALT>
+				;
+        };
+	cut: cut {
+	    label = "cut";
+	    compatible = "zmk,behavior-macro";
+	    #binding-cells = <0>;
+	    bindings
+				= <&macro_press   &kp LCTRL>
+				, <&macro_tap     &kp X>
+				, <&macro_release &kp LCTRL>
+				;
+        };
+	cpy: cpy {
+	    label = "cpy";
+	    compatible = "zmk,behavior-macro";
+	    #binding-cells = <0>;
+	    bindings
+				= <&macro_press   &kp LCTRL>
+				, <&macro_tap     &kp C>
+				, <&macro_release &kp LCTRL>
+				;
+        };
+	pst: pst {
+	    label = "pst";
+	    compatible = "zmk,behavior-macro";
+	    #binding-cells = <0>;
+	    bindings
+				= <&macro_press   &kp LCTRL>
+				, <&macro_tap     &kp V>
+				, <&macro_release &kp LCTRL>
+				;
+        };
+	udo: udo {
+	    label = "udo";
+	    compatible = "zmk,behavior-macro";
+	    #binding-cells = <0>;
+	    bindings
+				= <&macro_press   &kp LCTRL>
+				, <&macro_tap     &kp Z>
+				, <&macro_release &kp LCTRL>
+				;
+        };
+	rdo: rdo {
+	    label = "rdo";
+	    compatible = "zmk,behavior-macro";
+	    #binding-cells = <0>;
+	    bindings
+				= <&macro_press   &kp LCTRL>
+				, <&macro_tap     &kp Y>
+				, <&macro_release &kp LCTRL>
 				;
         };
     };
@@ -108,12 +159,12 @@
 	// Navigation layer
         nav {
             bindings = <
-    &bt BT_CLR &kp K_APP &kp C_BRI_UP &kp C_VOL_UP &kp C_PREV             &kp PG_UP &kp HOME  &kp PSCRN &kp PAUSE_BREAK &bt BT_CLR
-    &kp LGUI  &kp LCTRL &kp LALT  &kp LSHFT    &kp C_PP                   &kp INS   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  
-    &kp K_UNDO &kp K_REDO &kp C_BRI_DN &kp C_VOL_DN &kp C_NEXT            &kp PG_DN &kp END   &kp K_CUT &kp K_COPY &kp K_PASTE
+   &bt BT_CLR &kp K_APP &kp C_BRI_UP &kp C_VOL_UP &kp C_PREV              &kp PG_UP &kp HOME  &kp PSCRN &kp PAUSE_BREAK &bt BT_CLR
+    &kp LGUI  &kp LCTRL &kp LALT     &kp LSHFT    &kp C_PP                &kp INS   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  
+    &udo      &rdo 	&kp C_BRI_DN &kp C_VOL_DN &kp C_NEXT              &kp PG_DN &kp END   &cut 	&cpy 	  &pst
               &trans    &trans                                                                &trans    &trans
                                   &trans    &trans                        &trans    &trans
-                                            &trans 	 &trans   	&trans    &trans
+                                            &trans   &trans   	&trans    &trans
                                             &trans   &trans     &to(0)    &trans
             >;
         };
