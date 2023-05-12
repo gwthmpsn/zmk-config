@@ -60,6 +60,13 @@
 	bindings = <&kp KP_N9>, <&kp KP_EQUAL>;
 	mods = <(MOD_LSFT|MOD_RSFT)>;
         };	
+	R0C9: R0C9 {								// 0 ?
+	compatible = "zmk,behavior-mod-morph";
+	label = "R0C9";
+	#binding-cells = <0>;
+	bindings = <&kp KP_N0>, <&kp KP_QMARK>;
+	mods = <(MOD_LSFT|MOD_RSFT)>;
+        };	
     };
 
     keymap {
@@ -88,7 +95,7 @@
 	// Symbonumeric layer
         sym {
 			bindings = <
-    &kp N1	  &kp N2   &kp N3    &kp N4    &kp N5                         &kp N6 	&kp N7    &R0C7     &R0C8     &kp N0
+    &kp N1	  &kp N2   &kp N3    &kp N4    &kp N5                         &kp N6 	&kp N7    &R0C7     &R0C8     &R0C9
 &mt LGUI LBRC &mt LCTRL LBKT &mt LALT LPAR &mt LSHFT BSLH &trans &trans &mt RSHFT FSLH &mt RALT RPAR &mt RCTRL RBKT &mt RGUI RBRC
     &kp GRAVE &kp LT   &kp ASTRK &kp PLUS  &trans                         &trans 	&kp MINUS &kp FSLH  &kp GT    &kp PIPE
               &trans   &trans                                                                 &trans  	&trans
