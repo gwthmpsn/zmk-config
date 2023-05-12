@@ -141,7 +141,7 @@
         };
 		
 	// League of Legends layer
-		qwt {
+		lge {
             bindings = <
     &none     &kp N1   &kp N2    &kp N3    &kp N4                      	  &none		&none	  &none	    &none	  &none
 	&kp LSHFT &kp Q    &kp W     &kp E     &kp R                      	  &none		&none	  &none	    &none	  &none
