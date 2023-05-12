@@ -57,7 +57,7 @@
 	compatible = "zmk,behavior-mod-morph";
 	label = "R0C8";
 	#binding-cells = <0>;
-	bindings = <&kp KP_N9>, <&kp KP_EQUAL>;
+	bindings = <&kp KP_N9>, <&kp EQUAL>;
 	mods = <(MOD_LSFT|MOD_RSFT)>;
         };	
 	R0C9: R0C9 {								// 0 ?
