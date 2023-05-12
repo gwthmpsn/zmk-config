@@ -12,12 +12,13 @@
 
 / {
 	macros {
-        deg: deg {
-            label = "deg";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
+	deg: deg {
+	    label = "deg";
+	    compatible = "zmk,behavior-macro";
+	    #binding-cells = <0>;
+	    bindings
 				= <&macro_press   &kp LALT>
+				, <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N6>
 				, <&macro_release &kp LALT>
 				;
         };
@@ -60,7 +61,6 @@
 		mods = <(MOD_LSFT|MOD_RSFT)>;
         };	
     };
-  };
 
     keymap {
         compatible = "zmk,keymap";
