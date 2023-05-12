@@ -3,10 +3,26 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define RAISE   1
-#define LOWER   2
+#define SYM   	1
+#define NAV   	2
+#define FXN		3
+#define QWT		4
+#define LGE		5
+// Would love to have a greek layer :(
 
 / {
+	macros {
+        deg: deg {
+            label = "deg";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+				= <&macro_press   &kp LALT>
+				, <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_7 &kp KP_6>
+				, <&macro_release &kp LALT>
+				;
+        };
+    };
     behaviors {
     mo_tog: behavior_mo_tog {
         compatible = "zmk,behavior-hold-tap";
@@ -16,228 +32,121 @@
         tapping-term-ms = <200>;
         bindings = <&mo>, <&tog>;
         };
-    R0C1: R0C1 { 								// #$
+	R2C5: R2C5 {								// . ,
         compatible = "zmk,behavior-mod-morph";
-        label = "R0C1";
-        #binding-cells = <0>;
-        bindings = <&kp HASH>, <&kp DOLLAR>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R0C2: R0C2 { 								// { /
-        compatible = "zmk,behavior-mod-morph";
-        label = "R0C2";
-        #binding-cells = <0>;
-        bindings = <&kp LBRC>, <&kp FSLH>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R0C3: R0C3 { 					            // ^^			
-        compatible = "zmk,behavior-mod-morph";
-        label = "R0C3";
-        #binding-cells = <0>;
-        bindings = <&kp RBRC>, <&kp BSLH>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R0C4: R0C4 {								// < >
-        compatible = "zmk,behavior-mod-morph";
-        label = "R0C4";
-        #binding-cells = <0>;
-        bindings = <&kp LT>, <&kp GT>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R1C0: R1C0 {								// & @
-        compatible = "zmk,behavior-mod-morph";
-        label = "R1C0";
-        #binding-cells = <0>;
-        bindings = <&kp AMPS>, <&kp AT>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R1C1: R1C1 {								// ! ?
-        compatible = "zmk,behavior-mod-morph";
-        label = "R1C1";
-        #binding-cells = <0>;
-        bindings = <&kp EXCL>, <&kp QMARK>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R1C2: R1C2 {								// ( -
-        compatible = "zmk,behavior-mod-morph";
-        label = "R1C2";
-        #binding-cells = <0>;
-        bindings = <&kp LPAR>, <&kp MINUS>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R1C3: R1C3 {								// ) +
-        compatible = "zmk,behavior-mod-morph";
-        label = "R1C3";
-        #binding-cells = <0>;
-        bindings = <&kp RPAR>, <&kp PLUS>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R1C4: R1C4 { 								// .,
-        compatible = "zmk,behavior-mod-morph";
-        label = "R1C4";
+        label = "R2C5";
         #binding-cells = <0>;
         bindings = <&kp PERIOD>, <&kp COMMA>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    R2C0: R2C0 {								// _ |
+	R3C5: R3C5 {								// BSPC DEL
         compatible = "zmk,behavior-mod-morph";
-        label = "R2C0";
+        label = "R3C5";
         #binding-cells = <0>;
-        bindings = <&kp UNDER>, <&kp PIPE>;
+        bindings = <&kp BSPC>, <&kp DEL>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R2C1: R2C1 {								// % ^
+        };	
+	R0C7: R0C7 {								// 8 deg
         compatible = "zmk,behavior-mod-morph";
-        label = "R2C1";
+        label = "R3C5";
         #binding-cells = <0>;
-        bindings = <&kp PRCNT>, <&kp CARET>;
+        bindings = <&kp KP_N8>, <&deg>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R2C2: R2C2 {								// [ *
-        compatible = "zmk,behavior-mod-morph";
-        label = "R2C2";
-        #binding-cells = <0>;
-        bindings = <&kp LBKT>, <&kp ASTRK>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R2C3: R2C3 {								// ] =
-        compatible = "zmk,behavior-mod-morph";
-        label = "R2C3";
-        #binding-cells = <0>;
-        bindings = <&kp RBKT>, <&kp EQUAL>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R0C6: R0C6 {								// 7 F7
-        compatible = "zmk,behavior-mod-morph";
-        label = "R0C6";
-        #binding-cells = <0>;
-        bindings = <&kp KP_N7>, <&kp F7>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R0C7: R0C7 {								// 8 F8
-        compatible = "zmk,behavior-mod-morph";
-        label = "R0C7";
-        #binding-cells = <0>;
-        bindings = <&kp KP_N8>, <&kp F8>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R0C8: R0C8 {								// 9 F9
-        compatible = "zmk,behavior-mod-morph";
-        label = "R0C8";
-        #binding-cells = <0>;
-        bindings = <&kp KP_N9>, <&kp F9>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R0C9: R0C9 {								// none F10
-        compatible = "zmk,behavior-mod-morph";
-        label = "R0C9";
-        #binding-cells = <0>;
-        bindings = <&none>, <&kp F10>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R1C6: R1C6 {								// 4 F4
-        compatible = "zmk,behavior-mod-morph";
-        label = "R1C6";
-        #binding-cells = <0>;
-        bindings = <&kp KP_N4>, <&kp F4>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R1C7: R1C7 {								// 5 F5
-        compatible = "zmk,behavior-mod-morph";
-        label = "R1C7";
-        #binding-cells = <0>;
-        bindings = <&kp KP_N5>, <&kp F5>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R1C8: R1C8 {								// 6 F6
-        compatible = "zmk,behavior-mod-morph";
-        label = "R1C8";
-        #binding-cells = <0>;
-        bindings = <&kp KP_N6>, <&kp F6>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R1C9: R1C9 {								// none F11
-        compatible = "zmk,behavior-mod-morph";
-        label = "R1C9";
-        #binding-cells = <0>;
-        bindings = <&none>, <&kp F11>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R2C6: R2C6 {								// 1 F1
-        compatible = "zmk,behavior-mod-morph";
-        label = "R2C6";
-        #binding-cells = <0>;
-        bindings = <&kp KP_N1>, <&kp F1>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R2C7: R2C7 {								// 2 F2
-        compatible = "zmk,behavior-mod-morph";
-        label = "R2C7";
-        #binding-cells = <0>;
-        bindings = <&kp KP_N2>, <&kp F2>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R2C8: R2C8 {								// 3 F3
-        compatible = "zmk,behavior-mod-morph";
-        label = "R2C8";
-        #binding-cells = <0>;
-        bindings = <&kp KP_N3>, <&kp F3>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    R3C7: R3C7 {								// 0 F12
-        compatible = "zmk,behavior-mod-morph";
-        label = "R3C7";
-        #binding-cells = <0>;
-        bindings = <&kp KP_N0>, <&kp F12>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+        };	
+	R0C8: R0C8 {								// 9 =
+		compatible = "zmk,behavior-mod-morph";
+		label = "R3C5";
+		#binding-cells = <0>;
+		bindings = <&kp KP_N9>, <&kp KP_EQUAL>;
+		mods = <(MOD_LSFT|MOD_RSFT)>;
+        };	
     };
-
+  };
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
 // -------------------------------------------------------------------------------------------------------------------------
-// |    B    |    Y    |    O    |    U    |    '    |                   |    L    |    D    |    W    |    G    |    Q    |
-// |    C    |    I    |    E    |    A    |    .,   |                   |    H    |    T    |    S    |    N    |    J    |
-// |    Z    |    X    |    V    |    K    |    ;    |                   |    R    |    M    |    F    |    P    |   {2}   |
-//           |   TAB   |    ESC  |                                                           |   WIN   |   CTX   |
-//                               |   LSHFT |  SPACE  |                   |SPC + ALT|ENTR+SHFT|
-//                                         |  LCTRL  |   LALT  |  BSPC   |   DEL   |
-//                                         |  Raise  |   ENTER |   GUI   |  Lower  |
+// |    Q    |    C    |    H    |    P    |    G    |                   |    W    |    Y    |    O    |    J    |    V    |
+// |    R    |    S    |    N    |    T    |    '    |                   |    -    |    U    |    E    |    A    |    I    |
+// |    X    |    M    |    L    |    D    |    ;    |                   |    .    |    F    |    K    |    B    |    Z    |
+//           |         |         |                                                           |         |         |
+//                               |   ESC   |  SPACE  |                   |    x    |  ENTER  |
+//                                         |         |  LSHFT  |    x    |  BSPC   |
+//                                         |         |         |         |  layer  |
             bindings = <
-    &kp B     &kp Y    &kp O     &kp U     &kp APOS                       &kp L     &kp D     &kp W     &kp G     &kp Q
-    &kp C     &kp I    &kp E     &kp A     &R1C4                       	  &kp H     &kp T     &kp S     &kp N     &kp J
-    &kp Z     &kp X    &kp V     &kp K     &kp SEMI                       &kp R     &kp M     &kp F 	&kp P  	  &mo_tog 2 2
-              &kp TAB  &kp ESC                                                                &kp LWIN  &kp K_CONTEXT_MENU
-                                 &kp LSHFT &kp SPACE                   	  &none     &kp RSHFT
-                                           &mo_tog 1 1 &kp ENTER &none   &mo_tog 1 1
-                                           &kp LALT   &kp LCTRL  &kp DEL &kp BSPC
+    &kp Q     &kp C    &kp H     &kp P     &kp G                       	  &kp W     &kp Y     &kp O     &kp J     &kp V
+&mt LGUI R &mt LCTRL S &mt LALT N &mt LSHFT T &kp APOS                  &kp MINUS &mt RSHFT U &mt RALT E &mt RCTRL A &mt RGUI I
+    &kp X     &kp M    &kp L     &kp D     &kp SEMI                       &R2C5     &kp F     &kp K 	&kp B  	  &kp Z
+              &none    &none                                                                  &none  	&none
+                               &lt FXN ESC &lt NAV SPACE                  &none     &kp ENTER
+                                           &none 	 &kp LSHFT  &none     &R3C5
+                                           &to(5) 	 &to(4)      &to(0)     &mo_tog 1 1
             >;
         };
 
-        raise {
-bindings = <
-    &kp GRAVE &R0C1    &R0C2     &R0C3     &R0C4                       &kp C_VOL_UP &R0C6     &R0C7     &R0C8     &R0C9
-    &R1C0     &R1C1    &R1C2     &R1C3     &trans                      &kp C_PP     &R1C6     &R1C7     &R1C8     &R1C9
-    &R2C0     &R2C1    &R2C2     &R2C3     &trans                      &kp C_VOL_DN &R2C6     &R2C7 	&R2C8  	  &trans
-              &trans   &trans                                                                 &R3C7  	&trans
+	// Symbonumeric Layer
+        sym {
+			bindings = <
+    &kp N1	  &kp N2   &kp N3    &kp N4    &kp N5                         &kp N6 	&kp N7    &R0C7     &R0C8     &kp N0
+&mt LGUI LBRC &mt LCTRL LBKT &mt LALT LPAR &mt LSHFT BSLH &trans &trans &mt RSHFT FSLH &mt RALT RPAR &mt RCTRL RBKT &mt RGUI RBRC
+    &kp GRAVE &kp LT   &kp ASTRK &kp PLUS  &trans                         &trans 	&kp MINUS &kp FSLH  &kp GT    &kp PIPE
+              &trans   &trans                                                                 &trans  	&trans
                                  &trans    &trans                        &trans     &trans
-                                           &to(0)    &trans    &trans    &to(0)
                                            &trans    &trans    &trans    &trans
+                                           &trans    &trans    &to(0)    &to(0)
             >;
         };
 
-        lower {
+        nav {
             bindings = <
-    &trans 	  &trans    &trans    &trans    &trans                        &kp PG_UP  &kp HOME &kp UP    &none     &none 
-    &trans    &trans    &trans    &trans    &trans                        &kp LEFT   &none    &none     &kp RIGHT &none 
-    &trans    &trans    &trans    &trans    &trans                        &kp PG_DN  &kp END  &kp DOWN  &none     &to(0) 
+    &bt BT_CLR &K_APP &kp C_BRI_UP &kp C_VOL_UP &kp C_PREV           	  &kp PG_UP &kp HOME  &kp PSCRN &kp PAUSE_BREAK &bt BT_CLR
+    &kp LGUI  &kp LCTRL &kp LALT  &kp LSHFT    &kp C_PP                   &kp INS   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  
+    &kp K_UNDO &kp K_REDO &kp C_BRI_DN &kp C_VOL_DN &kp C_NEXT            &kp PG_DN &kp END   &kp K_CUT &kp K_COPY &kp K_PASTE    
               &trans    &trans                                                                &trans    &trans
                                   &trans    &trans                        &trans    &trans
-                                           &mo_tog 1 1 &trans  &trans    &mo_tog 1 1
-                                            &trans   &trans    &trans    &trans
+                                            &trans 	 &trans   	&trans    &trans
+                                            &trans   &trans     &to(0)    &trans
+            >;
+        };
+		
+	// Function key layer
+		fxn {
+            bindings = <
+    &kp F1 	  &kp F2    &kp F3    &kp F4    &kp F5           			  &kp F6    &kp F7    &kp F8    &kp F9    &kp F10 
+    &kp F11   &none 	&none  	  &none     &none                     	  &none   	&none     &none 	&none     &kp F12  
+    &none     &none  	&none 	  &none 	&none           			  &none 	&none  	  &none  	&none  	  &none    
+              &trans    &trans                                                                &trans    &trans
+                                  &trans    &trans                        &trans    &trans
+                                            &trans 	 &trans   	&trans    &trans
+                                            &trans   &trans     &to(0)    &trans
+            >;
+        };
+		
+	// QWERTY layer for plebs
+		qwt {
+            bindings = <
+    &kp Q     &kp W    &kp E     &kp R     &kp T                      	  &kp Y     &kp U     &kp I     &kp O     &kp P
+	&kp A     &kp S    &kp D     &kp F     &kp G                       	  &kp H     &kp I     &kp J     &kp K     &kp L
+    &kp Z     &kp X    &kp C     &kp V     &kp B                       	  &kp N     &kp M     &kp COMMA &kp PERIOD &kp FSLH
+              &trans    &trans                                                                &trans    &trans
+                                  &trans    &trans                        &trans    &trans
+                                            &trans 	 &trans   	&trans    &trans
+                                            &trans   &trans     &to(0)    &trans
+            >;
+        };
+		
+	// League of Legends layer
+		qwt {
+            bindings = <
+    &none     &kp N1   &kp N2    &kp N3    &kp N4                      	  &none		&none	  &none	    &none	  &none
+	&kp LSHFT &kp Q    &kp W     &kp E     &kp R                      	  &none		&none	  &none	    &none	  &none
+    &kp LCTRL &none    &none     &kp D     &kp F                      	  &none		&none	  &none	    &none	  &none
+              &trans   &trans                                                                 &trans    &trans
+                                  &kp LALT  &trans                        &trans    &trans
+                                            &trans 	 &trans   	&trans    &trans
+                                            &to(0)   &trans     &to(0)    &trans
             >;
         };
     };
