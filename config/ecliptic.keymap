@@ -101,7 +101,7 @@
         nav {
             bindings = <
 <<<<<<< HEAD
-    &bt BT_CLR &K_APP &kp C_BRI_UP &kp C_VOL_UP &kp C_PREV           	  &kp PG_UP &kp HOME  &kp PSCRN &kp PAUSE_BREAK &bt BT_CLR
+    &bt BT_CLR &kp K_APP &kp C_BRI_UP &kp C_VOL_UP &kp C_PREV           	  &kp PG_UP &kp HOME  &kp PSCRN &kp PAUSE_BREAK &bt BT_CLR
     &kp LGUI  &kp LCTRL &kp LALT  &kp LSHFT    &kp C_PP                   &kp INS   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  
     &kp K_UNDO &kp K_REDO &kp C_BRI_DN &kp C_VOL_DN &kp C_NEXT            &kp PG_DN &kp END   &kp K_CUT &kp K_COPY &kp K_PASTE    
 =======
