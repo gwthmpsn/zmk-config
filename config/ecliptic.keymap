@@ -80,7 +80,7 @@
     &kp X     &kp M    &kp L     &kp D     &kp SEMI                       &R2C5     &kp F     &kp K 	&kp B  	  &kp Z
               &none    &none                                                                  &none  	&none
                                &lt FXN ESC &lt NAV SPACE                  &none     &kp ENTER
-                                           &none 	 &kp LSHFT  &none     &R3C5
+                                           &none 	 &kp TAB  &none     &R3C5
                                            &to(5) 	 &to(4)    &mo_tog 1 1  &to(0)     
             >;
         };
