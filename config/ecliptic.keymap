@@ -125,17 +125,17 @@
 
         default_layer {
 // -------------------------------------------------------------------------------------------------------------------------
-// |    Q    |    C    |    H    |    P    |    G    |                   |    W    |    Y    |    O    |    J    |    V    |
+// |    Q    |    C    |    H    |    P    |    V    |                   |    W    |    Y    |    O    |    J    |    Z    |
 // |    R    |    S    |    N    |    T    |    '    |                   |    -    |    U    |    E    |    A    |    I    |
-// |    X    |    M    |    L    |    D    |    ;    |                   |    .    |    F    |    K    |    B    |    Z    |
+// |    X    |    M    |    L    |    D    |    ;    |                   |    .    |    F    |    K    |    G    |    B    |
 //           |         |         |                                                           |         |         |
 //                               |   ESC   |  SPACE  |                   |    x    |  ENTER  |
 //                                         |         |  LSHFT  |    x    |  BSPC   |
 //                                         |         |         |         |  layer  |
             bindings = <
-    &kp Q     &kp C    &kp H     &kp P     &kp G                       	  &kp W     &kp Y     &kp O     &kp J     &kp V
+    &kp Q     &kp C    &kp H     &kp P     &kp V                       	  &kp W     &kp Y     &kp O     &kp J     &kp Z
 &mt LGUI R &mt LCTRL S &mt LALT N &mt LSHFT T &kp APOS                  &kp MINUS &mt RSHFT U &mt RALT E &mt RCTRL A &mt RGUI I
-    &kp X     &kp M    &kp L     &kp D     &kp SEMI                       &R2C5     &kp F     &kp K 	&kp B  	  &kp Z
+    &kp X     &kp M    &kp L     &kp D     &kp SEMI                       &R2C5     &kp F     &kp K 	&kp G  	  &kp B
               &none    &none                                                                  &none  	&none
                                &lt FXN ESC &lt NAV SPACE                  &none     &kp ENTER
                                            &none 	 &kp TAB  &none     &R3C5
