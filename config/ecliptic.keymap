@@ -121,7 +121,7 @@
 		R3C5: R3C5 {								// I want this to be bspc, del, or ctrl
 			compatible = "zmk,behavior-hold-tap";
 		    	label = "R3C5";
-		    	#binding-cells = <2>;
+		    	#binding-cells = <1>;
 		    	bindings = <&kp>, <&bspc_del>;
 		    	tapping-term-ms = <200>;
 		};
