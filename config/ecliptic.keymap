@@ -194,7 +194,7 @@
 		fxn {
             bindings = <
     &kp F1	&kp F2		&kp F3    	&kp F4		&kp F5        		&kp F6    	&kp F7		&kp F8    	&kp F9		&kp F10 
-    &kp KP_1	&kp KP_2	&kp KP_3  	&kp KP_4	&kp KP_5		&kp KP_6	&kp KP_7     	&kp KP_8 	&kp KP_9	&kp KP_0  
+    &kp KP_N1	&kp KP_N2	&kp KP_N3  	&kp KP_N4	&kp KP_N5		&kp KP_N6	&kp KP_N7     	&kp KP_N8 	&kp KP_N9	&kp KP_N0  
     &none     	&none  		&none 	  	&none 		&kp F11         	&kp F12 	&none		&none		&none		&none    
               	&trans    	&trans                                                                			&trans		&trans
                                 &trans		&trans                        				&trans    	&trans
