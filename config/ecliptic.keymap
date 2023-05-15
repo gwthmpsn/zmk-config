@@ -74,51 +74,58 @@
 				;
         };
     };
-    behaviors {
-    mo_tog: behavior_mo_tog {
-        compatible = "zmk,behavior-hold-tap";
-        label = "mo_tog";
-        #binding-cells = <2>;
-        flavor = "hold-preferred";
-        tapping-term-ms = <200>;
-        bindings = <&mo>, <&tog>;
-        };
-	R1C4: R1C4 {								// . ,
-        compatible = "zmk,behavior-mod-morph";
-        label = "R1C4";
-        #binding-cells = <0>;
-        bindings = <&kp PERIOD>, <&kp COMMA>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-	R3C5: R3C5 {								// BSPC DEL
-        compatible = "zmk,behavior-mod-morph";
-        label = "R3C5";
-        #binding-cells = <0>;
-        bindings = <&kp BSPC>, <&kp DEL>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };	
-	R0C7: R0C7 {								// 8 deg
-        compatible = "zmk,behavior-mod-morph";
-        label = "R0C7";
-        #binding-cells = <0>;
-        bindings = <&kp KP_N8>, <&deg>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };	
-	R0C8: R0C8 {								// 9 =
-	compatible = "zmk,behavior-mod-morph";
-	label = "R0C8";
-	#binding-cells = <0>;
-	bindings = <&kp KP_N9>, <&kp EQUAL>;
-	mods = <(MOD_LSFT|MOD_RSFT)>;
-        };	
-	R0C9: R0C9 {								// 0 ?
-	compatible = "zmk,behavior-mod-morph";
-	label = "R0C9";
-	#binding-cells = <0>;
-	bindings = <&kp KP_N0>, <&kp QMARK>;
-	mods = <(MOD_LSFT|MOD_RSFT)>;
-        };	
-    };
+	behaviors {
+		mo_tog: behavior_mo_tog {
+			compatible = "zmk,behavior-hold-tap";
+			label = "mo_tog";
+			#binding-cells = <2>;
+			flavor = "hold-preferred";
+			tapping-term-ms = <200>;
+			bindings = <&mo>, <&tog>;
+		};
+		R1C4: R1C4 {								// . ,
+			compatible = "zmk,behavior-mod-morph";
+			label = "R1C4";
+			#binding-cells = <0>;
+			bindings = <&kp PERIOD>, <&kp COMMA>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};	
+		R0C7: R0C7 {								// 8 deg
+			compatible = "zmk,behavior-mod-morph";
+			label = "R0C7";
+			#binding-cells = <0>;
+			bindings = <&kp KP_N8>, <&deg>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};	
+		R0C8: R0C8 {								// 9 =
+			compatible = "zmk,behavior-mod-morph";
+			label = "R0C8";
+			#binding-cells = <0>;
+			bindings = <&kp KP_N9>, <&kp EQUAL>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};	
+			R0C9: R0C9 {							// 0 ?
+			compatible = "zmk,behavior-mod-morph";
+			label = "R0C9";
+			#binding-cells = <0>;
+			bindings = <&kp KP_N0>, <&kp QMARK>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+		bsps_del: bspc_del {							// BSPC DEL
+			compatible = "zmk,behavior-mod-morph";
+			label = "bspc_del";
+			#binding-cells = <0>;
+			bindings = <&kp BSPC>, <&kp DEL>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+		R3C5: R3C5 {								// I want this to be bspc, del, or ctrl
+			compatible = "zmk,behavior-hold-tap";
+		    	label = "R3C5";
+		    	#binding-cells = <2>;
+		    	bindings = <&mt>, <&bspc_del>;
+		    	tapping-term-ms = <200>;
+		};
+	    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -134,34 +141,34 @@
 //                                         |         |         |         |  layer  |
             bindings = <
     &kp Q     &kp C    &kp H     &kp P     &kp V                       	  &kp W     &kp Y     &kp O     &kp J     &kp Z
-&mt LGUI R &mt LCTRL S &mt LALT N &mt LSHFT T  &R1C4                &kp APOS  &mt RSHFT U &mt RALT E &mt RCTRL A &mt RGUI I
-    &kp X     &kp M    &kp L     &kp D     &kp SEMI                        &kp MINUS    &kp F     &kp K 	&kp G  	  &kp B
+    &kp R     &kp S    &kp N     &kp T     &R1C4                	  &kp APOS  &kp U     &kp E     &kp A     &kp I
+ &mt LGUI X   &kp M    &kp L     &kp D     &kp SEMI                       &kp MINUS &kp F     &kp K 	&kp G  	  &mt RGUI B
               &none    &none                                                                  &none  	&none
-                               &lt FXN ESC &lt NAV SPACE                  &none     &kp ENTER
-                                           &none 	 &kp TAB  &none     &R3C5
-                                           &to(5) 	 &to(4)    &mo_tog 1 1  &to(0)     
+                               &lt FXN ESC &lt NAV SPACE                  &none     &mt LALT ENTER
+                                           &none    &mt LSHFT TAB  &none     &R3C5 LCTRL
+                                           &to(5) 	 &to(4)  &mo_tog 1 1 &to(0)     
             >;
         };
 
 	// Symbonumeric layer
         sym {
 			bindings = <
-    &kp N1	  &kp N2   &kp N3    &kp N4    &kp N5                         &kp N6 	&kp N7    &R0C7     &R0C8     &R0C9
-&mt LGUI LBRC &mt LCTRL LBKT &mt LALT LPAR &mt LSHFT BSLH &trans &trans &mt RSHFT FSLH &mt RALT RPAR &mt RCTRL RBKT &mt RGUI RBRC
-    &kp GRAVE &kp LT   &kp ASTRK &kp PLUS  &trans                         &trans 	&kp MINUS &kp FSLH  &kp GT    &kp PIPE
-              &trans   &trans                                                                 &trans  	&trans
-                                 &trans    &trans                        &trans     &trans
-                                           &trans    &trans    &trans    &trans
-                                           &trans    &trans    &to(0)    &to(0)
+    &kp N1	&kp N2   &kp N3		&kp N4		&kp N5                         	&kp N6 	&kp N7		&R0C7     	&R0C8     	&R0C9
+    &kp LBRC 	&kp LBKT &kp LPAR	&kp BSLH	&trans 			  	&trans 	&kp FSLH	&kp RPAR	&kp RBKT	&kp RBRC
+    &kp GRAVE 	&kp LT   &kp ASTRK 	&kp PLUS	&trans                   	&trans 	&kp MINUS	&kp FSLH	&kp GT		&kp PIPE
+              		&trans		&trans                                                                 		&trans  	&trans
+                         		&trans    	&trans                        	&trans	&trans
+                                           		&trans    &trans    	&trans	&trans
+                                           		&trans    &trans    	&to(0)	&to(0)
             >;
         };
 
 	// Navigation layer
         nav {
             bindings = <
-   &bt BT_CLR &kp K_APP &kp C_BRI_UP &kp C_VOL_UP &kp C_PREV              &kp PG_UP &kp HOME  &kp PSCRN &kp PAUSE_BREAK &bt BT_CLR
-    &kp LGUI  &kp LCTRL &kp LALT     &kp LSHFT    &kp C_PP                &kp INS   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  
-    &udo      &rdo 	&kp C_BRI_DN &kp C_VOL_DN &kp C_NEXT              &kp PG_DN &kp END   &cut 	&cpy 	  &pst
+&bt BT_CLR &kp K_APP &kp C_BRI_UP &kp C_VOL_UP &kp C_PREV              &kp PG_UP &kp HOME  &kp PSCRN &kp PAUSE_BREAK &bt BT_CLR
+&none	&none	&none	&none	&kp C_PP                &kp INS   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  
+&udo      &rdo 	&kp C_BRI_DN &kp C_VOL_DN &kp C_NEXT              &kp PG_DN &kp END   &cut 	&cpy 	  &pst
               &trans    &trans                                                                &trans    &trans
                                   &trans    &trans                        &trans    &trans
                                             &trans   &trans   	&trans    &trans
