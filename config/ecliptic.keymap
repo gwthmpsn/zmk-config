@@ -111,7 +111,7 @@
 			bindings = <&kp KP_N0>, <&kp QMARK>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-		bsps_del: bspc_del {							// BSPC DEL
+		bspc_del: bspc_del {							// BSPC DEL
 			compatible = "zmk,behavior-mod-morph";
 			label = "bspc_del";
 			#binding-cells = <0>;
