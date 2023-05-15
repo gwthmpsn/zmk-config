@@ -111,12 +111,26 @@
 			bindings = <&kp KP_N0>, <&kp QMARK>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
+		spc_entr: spc_entr {							// SPACE ENTER
+			compatible = "zmk,behavior-mod-morph";
+			label = "spc_entr";
+			#binding-cells = <0>;
+			bindings = <&kp SPACE>, <&kp ENTER>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
 		bspc_del: bspc_del {							// BSPC DEL
 			compatible = "zmk,behavior-mod-morph";
 			label = "bspc_del";
 			#binding-cells = <0>;
 			bindings = <&kp BSPC>, <&kp DEL>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+		R3C1: R3C1 {								// I want this to be bspc, del, or ctrl
+			compatible = "zmk,behavior-hold-tap";
+		    	label = "R3C1";
+		    	#binding-cells = <2>;
+		    	bindings = <&lt>, <&spc_entr>;
+		    	tapping-term-ms = <200>;
 		};
 		R3C5: R3C5 {								// I want this to be bspc, del, or ctrl
 			compatible = "zmk,behavior-hold-tap";
@@ -144,18 +158,18 @@
     &kp R     &kp S    &kp N     &kp T     &R1C4                	  &kp APOS  &kp U     &kp E     &kp A     &kp I
  &mt LGUI X   &kp M    &kp L     &kp D     &kp SEMI                       &kp MINUS &kp F     &kp K 	&kp G  	  &mt RGUI B
               &none    &none                                                                  &none  	&none
-                               &lt FXN ESC &lt NAV SPACE                  &none     &mt LSHFT ENTER
-                                           &none    &mt LALT TAB  &none     &R3C5 LCTRL BSPC
-                                           &to(5) 	 &to(4)  &mo_tog 1 1 &to(0)     
+                               &lt FXN ESC &R3C1 NAV SPACE                  &none     &mt RALT DEL
+                                           &none    &lt SYM TAB  &none     &R3C5 RSHFT BSPC
+                                           &to(5) 	 &to(4)  &mt LCTRL ENTER &to(0)     
             >;
         };
 
 	// Symbonumeric layer
         sym {
 			bindings = <
-    &kp N1	&kp N2   &kp N3		&kp N4		&kp N5                         	&kp N6 	&kp N7		&R0C7     	&R0C8     	&R0C9
-    &kp LBRC 	&kp LBKT &kp LPAR	&kp BSLH	&trans 			  	&trans 	&kp FSLH	&kp RPAR	&kp RBKT	&kp RBRC
-    &kp GRAVE 	&kp LT   &kp ASTRK 	&kp PLUS	&trans                   	&trans 	&kp MINUS	&kp FSLH	&kp GT		&kp PIPE
+    &kp EXCL	&kp AT   &kp HASH	&kp DLLR	&kp PRCNT                      	&kp CARET	&kp AMPS	&deg     	&kp EQUAL     	&kp QMARK
+    &kp LBRC 	&kp LBKT &kp LPAR	&kp BSLH	&trans 			  	&trans 		&kp FSLH	&kp RPAR	&kp RBKT	&kp RBRC
+    &kp GRAVE 	&kp LT   &kp ASTRK 	&kp PLUS	&trans                   	&trans 		&kp MINUS	&kp FSLH	&kp GT		&kp PIPE
               		&trans		&trans                                                                 		&trans  	&trans
                          		&trans    	&trans                        	&trans	&trans
                                            		&trans    &trans    	&trans	&trans
@@ -179,13 +193,13 @@
 	// Function key layer
 		fxn {
             bindings = <
-    &kp F1 	  &kp F2    &kp F3    &kp F4    &kp F5           			  &kp F6    &kp F7    &kp F8    &kp F9    &kp F10 
-    &kp F11   &none 	&none  	  &none     &none                     	  &none   	&none     &none 	&none     &kp F12  
-    &none     &none  	&none 	  &none 	&none           			  &none 	&none  	  &none  	&none  	  &none    
-              &trans    &trans                                                                &trans    &trans
-                                  &trans    &trans                        &trans    &trans
-                                            &trans 	 &trans   	&trans    &trans
-                                            &trans   &trans     &to(0)    &trans
+    &kp F1	&kp F2		&kp F3    	&kp F4		&kp F5        		&kp F6    	&kp F7		&kp F8    	&kp F9		&kp F10 
+    &kp KP_1	&kp KP_2	&kp KP_3  	&kp KP_4	&kp KP_5		&kp KP_6	&kp KP_7     	&kp KP_8 	&kp KP_9	&kp KP_0  
+    &none     	&none  		&none 	  	&none 		&kp F11         	&kp F12 	&none		&none		&none		&none    
+              	&trans    	&trans                                                                			&trans		&trans
+                                &trans		&trans                        				&trans    	&trans
+                                            	&trans 	 	&trans   		&trans    	&trans
+                                            	&trans   	&trans     		&to(0)    	&trans
             >;
         };
 		
