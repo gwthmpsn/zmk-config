@@ -201,7 +201,7 @@
     &kp R     &kp S    &kp N     &kp T     &R1C4                	  &kp APOS  &kp U     &kp E     &kp A     &kp I
  &kp X   &kp M    &kp L     &kp D     &kp SEMI                       &kp MINUS &kp F     &kp K 	&kp G  	  &kp B
               &none    &none                                                                  &none  	&none
-                               &lt FXN ESC &spc_entr                  &none     &mo_tag 1 1
+                               &lt FXN ESC &spc_entr                  &none     &mo_tog 1 1
                                            &none    &lt NAV TAB  &none     &bspc_del
                                            &to(5) 	 &to(4)  &lt NAV ENTER &to(0)     
             >;
