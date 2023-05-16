@@ -178,7 +178,7 @@
         sym {
 			bindings = <
     &kp EXCL	&kp AT   &kp HASH	&kp DLLR	&kp PRCNT                      	&kp CARET	&kp AMPS	&deg     	&kp EQUAL     	&kp QMARK
-    &kp LBRC 	&kp LBKT &kp LPAR	&hm LSHFT BSLH	&trans 			  	&trans 		&hm RSHF FSLH	&kp RPAR	&kp RBKT	&kp RBRC
+    &kp LBRC 	&kp LBKT &kp LPAR	&hm LSHFT BSLH	&trans 			  	&trans 		&hm RSHFT FSLH	&kp RPAR	&kp RBKT	&kp RBRC
     &kp GRAVE 	&kp LT   &kp ASTRK 	&kp PLUS	&trans                   	&trans 		&kp MINUS	&kp FSLH	&kp GT		&kp PIPE
               		&trans		&trans                                                                 		&trans  	&trans
                          		&trans    	&trans                        			&trans		&trans
