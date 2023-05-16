@@ -158,8 +158,8 @@
     &kp R     &kp S    &kp N     &kp T     &R1C4                	  &kp APOS  &kp U     &kp E     &kp A     &kp I
  &mt LGUI X   &kp M    &kp L     &kp D     &kp SEMI                       &kp MINUS &kp F     &kp K 	&kp G  	  &mt RGUI B
               &none    &none                                                                  &none  	&none
-                               &lt FXN ESC &R3C1 NAV SPACE                  &none     &mt RALT DEL
-                                           &none    &lt SYM TAB  &none     &R3C5 RSHFT BSPC
+                               &lt FXN ESC &lt NAV SPACE                  &none     &mt LALT DEL
+                                           &none    &lt SYM TAB  &none     &mt LSHFT BSPC
                                            &to(5) 	 &to(4)  &mt LCTRL ENTER &to(0)     
             >;
         };
