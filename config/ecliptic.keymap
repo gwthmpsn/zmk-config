@@ -203,8 +203,8 @@
  &kp X   &kp M    &kp L     &kp D     &kp SEMI                       &kp MINUS &kp F     &kp K 	&kp G  	  &kp B
               &none    &none                                                                  &none  	&none
                                &lt FXN ESC &R3C1 NAV SPACE	&none     &mo_tog 1 1
-                                           &none    &lt HMR TAB  &none     &R3C5 NAV BSPC
-                                           &to(5) 	 &to(4)  &lt HMR ENTER &to(0)     
+                                           &none &lt HRM TAB  &none     &R3C5 NAV BSPC
+                                           &to(5) 	 &to(4)  &lt HRM ENTER &to(0)     
             >;
         };
 
