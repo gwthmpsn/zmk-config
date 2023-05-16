@@ -106,12 +106,12 @@
             		key-positions = <18 44>;
             		bindings = <&mt RALT A>;
 		};
-		combo_lctrl {
+		combo_rctrl {
             		timeout-ms = <50>;
             		key-positions = <17 44>;
             		bindings = <&mt RCTRL E>;
 		};
-		combo_lshft {
+		combo_rshft {
             		timeout-ms = <50>;
             		key-positions = <16 44>;
             		bindings = <&mt RSHFT O>;
