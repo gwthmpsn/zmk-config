@@ -11,69 +11,112 @@
 // Would love to have a greek layer :(
 
 / {
-     macros {
-	deg: deg {
-	    label = "deg";
-	    compatible = "zmk,behavior-macro";
-	    #binding-cells = <0>;
-	    bindings
+	macros {
+		deg: deg {
+			label = "deg";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
 				= <&macro_release &kp LSHFT>
 				, <&macro_press   &kp LALT>
 				, <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N6>
 				, <&macro_release &kp LALT>
 				;
-        };
-	cut: cut {
-	    label = "cut";
-	    compatible = "zmk,behavior-macro";
-	    #binding-cells = <0>;
-	    bindings
+		};
+		cut: cut {
+			label = "cut";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
 				= <&macro_press   &kp LCTRL>
 				, <&macro_tap     &kp X>
 				, <&macro_release &kp LCTRL>
 				;
-        };
-	cpy: cpy {
-	    label = "cpy";
-	    compatible = "zmk,behavior-macro";
-	    #binding-cells = <0>;
-	    bindings
+		};
+		cpy: cpy {
+			label = "cpy";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
 				= <&macro_press   &kp LCTRL>
 				, <&macro_tap     &kp C>
 				, <&macro_release &kp LCTRL>
 				;
-        };
-	pst: pst {
-	    label = "pst";
-	    compatible = "zmk,behavior-macro";
-	    #binding-cells = <0>;
-	    bindings
+		};
+		pst: pst {
+			label = "pst";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
 				= <&macro_press   &kp LCTRL>
 				, <&macro_tap     &kp V>
 				, <&macro_release &kp LCTRL>
 				;
-        };
-	udo: udo {
-	    label = "udo";
-	    compatible = "zmk,behavior-macro";
-	    #binding-cells = <0>;
-	    bindings
+		};
+		udo: udo {
+			label = "udo";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
 				= <&macro_press   &kp LCTRL>
 				, <&macro_tap     &kp Z>
 				, <&macro_release &kp LCTRL>
 				;
-        };
-	rdo: rdo {
-	    label = "rdo";
-	    compatible = "zmk,behavior-macro";
-	    #binding-cells = <0>;
-	    bindings
+		};
+			rdo: rdo {
+			label = "rdo";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
 				= <&macro_press   &kp LCTRL>
 				, <&macro_tap     &kp Y>
 				, <&macro_release &kp LCTRL>
 				;
-        };
-    };
+		};
+	};
+    	combos {
+        	compatible = "zmk,combos";
+        	combo_lgui {
+            		timeout-ms = <50>;
+            		key-positions = <10 39>;
+            		bindings = <&mt LGUI R>;
+		};
+		combo_lalt {
+            		timeout-ms = <50>;
+            		key-positions = <11 39>;
+            		bindings = <&mt LALT S>;
+		};
+		combo_lctrl {
+            		timeout-ms = <50>;
+            		key-positions = <12 39>;
+            		bindings = <&mt LCTRL N>;
+		};
+		combo_lshft {
+            		timeout-ms = <50>;
+            		key-positions = <13 39>;
+            		bindings = <&mt LSHFT T>;
+		};
+		combo_rgui {
+            		timeout-ms = <50>;
+            		key-positions = <19 44>;
+            		bindings = <&mt RGUI I>;
+		};
+		combo_ralt {
+            		timeout-ms = <50>;
+            		key-positions = <18 44>;
+            		bindings = <&mt RALT A>;
+		};
+		combo_lctrl {
+            		timeout-ms = <50>;
+            		key-positions = <17 44>;
+            		bindings = <&mt RCTRL E>;
+		};
+		combo_lshft {
+            		timeout-ms = <50>;
+            		key-positions = <16 44>;
+            		bindings = <&mt RSHFT O>;
+		};
+	};
 	behaviors {
 		mo_tog: behavior_mo_tog {
 			compatible = "zmk,behavior-hold-tap";
@@ -156,11 +199,11 @@
             bindings = <
     &kp Q     &kp C    &kp H     &kp P     &kp V                       	  &kp W     &kp Y     &kp O     &kp J     &kp Z
     &kp R     &kp S    &kp N     &kp T     &R1C4                	  &kp APOS  &kp U     &kp E     &kp A     &kp I
- &mt LGUI X   &kp M    &kp L     &kp D     &kp SEMI                       &kp MINUS &kp F     &kp K 	&kp G  	  &mt RGUI B
+ &kp X   &kp M    &kp L     &kp D     &kp SEMI                       &kp MINUS &kp F     &kp K 	&kp G  	  &kp B
               &none    &none                                                                  &none  	&none
-                               &lt FXN ESC &lt NAV SPACE                  &none     &mt LALT DEL
-                                           &none    &lt SYM TAB  &none     &mt LSHFT BSPC
-                                           &to(5) 	 &to(4)  &mt LCTRL ENTER &to(0)     
+                               &lt FXN ESC &spc_entr                  &none     &mo_tag 1 1
+                                           &none    &lt NAV TAB  &none     &bspc_del
+                                           &to(5) 	 &to(4)  &lt NAV ENTER &to(0)     
             >;
         };
 
