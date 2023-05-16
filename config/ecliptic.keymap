@@ -5,9 +5,10 @@
 #define DEFAULT 0
 #define SYM   	1
 #define NAV   	2
-#define FXN		3
-#define QWT		4
-#define LGE		5
+#define FXN	3
+#define QWT	4
+#define LGE	5
+#define HRM	6
 // Would love to have a greek layer :(
 
 / {
@@ -74,7 +75,7 @@
 				;
 		};
 	};
-    	combos {
+/*    	combos {
         	compatible = "zmk,combos";
         	combo_lgui {
             		timeout-ms = <50>;
@@ -116,7 +117,7 @@
             		key-positions = <16 44>;
             		bindings = <&mt RSHFT O>;
 		};
-	};
+	}; */
 	behaviors {
 		mo_tog: behavior_mo_tog {
 			compatible = "zmk,behavior-hold-tap";
@@ -179,7 +180,7 @@
 			compatible = "zmk,behavior-hold-tap";
 		    	label = "R3C5";
 		    	#binding-cells = <2>;
-		    	bindings = <&kp>, <&bspc_del>;
+		    	bindings = <&lt>, <&bspc_del>;
 		    	tapping-term-ms = <200>;
 		};
 	    };
@@ -201,9 +202,9 @@
     &kp R     &kp S    &kp N     &kp T     &R1C4                	  &kp APOS  &kp U     &kp E     &kp A     &kp I
  &kp X   &kp M    &kp L     &kp D     &kp SEMI                       &kp MINUS &kp F     &kp K 	&kp G  	  &kp B
               &none    &none                                                                  &none  	&none
-                               &lt FXN ESC &spc_entr                  &none     &mo_tog 1 1
-                                           &none    &lt NAV TAB  &none     &bspc_del
-                                           &to(5) 	 &to(4)  &lt NAV ENTER &to(0)     
+                               &lt FXN ESC &R3C1 NAV SPACE	&none     &mo_tog 1 1
+                                           &none    &lt HMR TAB  &none     &R3C5 NAV BSPC
+                                           &to(5) 	 &to(4)  &lt HMR ENTER &to(0)     
             >;
         };
 
@@ -271,5 +272,33 @@
                                             &to(0)   &trans     &to(0)    &trans
             >;
         };
+	
+	// Home-Row Mods
+		hrm {
+            bindings = <
+&trans		&trans		&trans		&trans		&trans			&trans		&trans		&trans		&trans		&trans
+&mt LGUI R	&mt LALT S	&mt LCTRL N	&mt LSHFT T	&trans			&trans		&mt RSHFT U	&mt RCTRL E	&mt RALT A	&mt RGUI I
+&trans 		&trans		&trans		&trans		&trans			&trans		&trans		&trans		&trans		&trans
+		&trans		&trans											&trans		&trans
+				&trans		&trans							&trans		&trans
+                                            	&trans 	 	&trans			&trans		&trans
+                                            	&to(0)   	&trans			&to(0)		&trans
+            >;
+        };
     };
 };
+
+/*
+	// trans layer
+		trans {
+            bindings = <
+&trans		&trans		&trans		&trans		&trans			&none		&none		&none		&none		&none
+&trans		&trans		&trans		&trans		&trans			&none		&none		&none		&none		&none
+&trans 		&trans		&trans		&trans		&trans			&none		&none		&none		&none		&none
+		&trans		&trans											&trans		&trans
+				&trans		&trans							&trans		&trans
+                                            	&trans 	 	&trans			&trans		&trans
+                                            	&to(0)   	&trans			&to(0)		&trans
+            >;
+        };
+*/
