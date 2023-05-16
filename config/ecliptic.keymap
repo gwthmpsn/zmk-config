@@ -8,7 +8,6 @@
 #define FXN	3
 #define QWT	4
 #define LGE	5
-#define HRM	6
 // Would love to have a greek layer :(
 
 / {
@@ -75,49 +74,6 @@
 				;
 		};
 	};
-/*    	combos {
-        	compatible = "zmk,combos";
-        	combo_lgui {
-            		timeout-ms = <50>;
-            		key-positions = <10 39>;
-            		bindings = <&mt LGUI R>;
-		};
-		combo_lalt {
-            		timeout-ms = <50>;
-            		key-positions = <11 39>;
-            		bindings = <&mt LALT S>;
-		};
-		combo_lctrl {
-            		timeout-ms = <50>;
-            		key-positions = <12 39>;
-            		bindings = <&mt LCTRL N>;
-		};
-		combo_lshft {
-            		timeout-ms = <50>;
-            		key-positions = <13 39>;
-            		bindings = <&mt LSHFT T>;
-		};
-		combo_rgui {
-            		timeout-ms = <50>;
-            		key-positions = <19 44>;
-            		bindings = <&mt RGUI I>;
-		};
-		combo_ralt {
-            		timeout-ms = <50>;
-            		key-positions = <18 44>;
-            		bindings = <&mt RALT A>;
-		};
-		combo_rctrl {
-            		timeout-ms = <50>;
-            		key-positions = <17 44>;
-            		bindings = <&mt RCTRL E>;
-		};
-		combo_rshft {
-            		timeout-ms = <50>;
-            		key-positions = <16 44>;
-            		bindings = <&mt RSHFT O>;
-		};
-	}; */
 	behaviors {
 		mo_tog: behavior_mo_tog {
 			compatible = "zmk,behavior-hold-tap";
@@ -183,10 +139,19 @@
 		    	bindings = <&mo>, <&bspc_del>;
 		    	tapping-term-ms = <200>;
 		};
+		hm: balanced_homerow_mods {
+			compatible = "zmk,behavior-hold-tap";
+			label = "HOMEROW_MODS";
+			#binding-cells = <2>;
+			tapping-term-ms = <200>;    // <---[[moderate duration]]
+			quick-tap-ms = <50>;
+			flavor = "balanced";
+			bindings = <&kp>, <&kp>;
+		};
 	    };
 
-    keymap {
-        compatible = "zmk,keymap";
+	keymap {
+		compatible = "zmk,keymap";
 
         default_layer {
 // -------------------------------------------------------------------------------------------------------------------------
@@ -198,13 +163,14 @@
 //                                         |         |  LSHFT  |    x    |  BSPC   |
 //                                         |         |         |         |  layer  |
             bindings = <
-    &kp Q     &kp C    &kp H     &kp P     &kp V                       	  &kp W     &kp Y     &kp O     &kp J     &kp Z
-    &kp R     &kp S    &kp N     &kp T     &R1C4                	  &kp APOS  &kp U     &kp E     &kp A     &kp I
- &kp X   &kp M    &kp L     &kp D     &kp SEMI                       &kp MINUS &kp F     &kp K 	&kp G  	  &kp B
-              &none    &none                                                                  &none  	&none
-                               &lt FXN ESC &R3C1 HRM SPACE	&none     &mo_tog 1 1
-                                           &none &lt NAV TAB  &none     &R3C5 HRM BSPC
-                                           &to(5) 	 &to(4)  &lt NAV ENTER &to(0)     
+&kp Q		&kp C		&kp H		&kp P		&kp V			&kp W		&kp Y		&kp O		&kp J		&kp Z
+//&kp R		&kp S		&kp N		&kp T		&R1C4			&kp APOS	&kp U		&kp E		&kp A		&kp I
+&hm LGUI R	&hm LALT S	&hm LCTRL N	&hm LSHFT T	&R1C4			&kp APOS	&hm RSHFT U	&hm RCTRL E	&hm RALT A	&hm RGUI I
+&kp X		&kp M		&kp L		&kp D		&kp SEMI		&kp MINUS	&kp F		&kp K		&kp G		&kp B
+		&none		&none                                                                  			&none		&none
+                               	&lt FXN ESC	&spc_entr						&none		&mo_tog 1 1
+                                           	&none		&lt NAV TAB		&none		&bspc_del
+						&to(5)		&to(4)			&lt NAV ENTER	&to(0)     
             >;
         };
 
@@ -212,12 +178,12 @@
         sym {
 			bindings = <
     &kp EXCL	&kp AT   &kp HASH	&kp DLLR	&kp PRCNT                      	&kp CARET	&kp AMPS	&deg     	&kp EQUAL     	&kp QMARK
-    &kp LBRC 	&kp LBKT &kp LPAR	&kp BSLH	&trans 			  	&trans 		&kp FSLH	&kp RPAR	&kp RBKT	&kp RBRC
+    &kp LBRC 	&kp LBKT &kp LPAR	&hm LSHFT BSLH	&trans 			  	&trans 		&hm RSHF FSLH	&kp RPAR	&kp RBKT	&kp RBRC
     &kp GRAVE 	&kp LT   &kp ASTRK 	&kp PLUS	&trans                   	&trans 		&kp MINUS	&kp FSLH	&kp GT		&kp PIPE
               		&trans		&trans                                                                 		&trans  	&trans
-                         		&trans    	&trans                        	&trans	&trans
-                                           		&trans    &trans    	&trans	&trans
-                                           		&trans    &trans    	&to(0)	&to(0)
+                         		&trans    	&trans                        			&trans		&trans
+							&trans    &trans    		&trans		&trans
+                                           		&trans    &trans    		&to(0)		&to(0)
             >;
         };
 
@@ -270,19 +236,6 @@
                                   &kp LALT  &trans                        &trans    &trans
                                             &trans 	 &trans   	&trans    &trans
                                             &to(0)   &trans     &to(0)    &trans
-            >;
-        };
-	
-	// Home-Row Mods
-		hrm {
-            bindings = <
-&trans		&trans		&trans		&trans		&trans			&trans		&trans		&trans		&trans		&trans
-&mt LGUI R	&mt LALT S	&mt LCTRL N	&mt LSHFT T	&trans			&trans		&mt RSHFT U	&mt RCTRL E	&mt RALT A	&mt RGUI I
-&trans 		&trans		&trans		&trans		&trans			&trans		&trans		&trans		&trans		&trans
-		&trans		&trans											&trans		&trans
-				&trans		&trans							&trans		&trans
-                                            	&trans 	 	&trans			&trans		&trans
-                                            	&to(0)   	&trans			&to(0)		&trans
             >;
         };
     };
