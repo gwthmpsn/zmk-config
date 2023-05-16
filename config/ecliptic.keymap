@@ -169,18 +169,18 @@
 			bindings = <&kp BSPC>, <&kp DEL>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-		R3C1: R3C1 {								// I want this to be bspc, del, or ctrl
+		R3C1: R3C1 {								// I want this to be bspc, del, or layer
 			compatible = "zmk,behavior-hold-tap";
 		    	label = "R3C1";
 		    	#binding-cells = <2>;
-		    	bindings = <&lt>, <&spc_entr>;
+		    	bindings = <&mo>, <&spc_entr>;
 		    	tapping-term-ms = <200>;
 		};
-		R3C5: R3C5 {								// I want this to be bspc, del, or ctrl
+		R3C5: R3C5 {								// I want this to be bspc, del, or layer
 			compatible = "zmk,behavior-hold-tap";
 		    	label = "R3C5";
 		    	#binding-cells = <2>;
-		    	bindings = <&lt>, <&bspc_del>;
+		    	bindings = <&mo>, <&bspc_del>;
 		    	tapping-term-ms = <200>;
 		};
 	    };
@@ -202,9 +202,9 @@
     &kp R     &kp S    &kp N     &kp T     &R1C4                	  &kp APOS  &kp U     &kp E     &kp A     &kp I
  &kp X   &kp M    &kp L     &kp D     &kp SEMI                       &kp MINUS &kp F     &kp K 	&kp G  	  &kp B
               &none    &none                                                                  &none  	&none
-                               &lt FXN ESC &R3C1 NAV SPACE	&none     &mo_tog 1 1
-                                           &none &lt HRM TAB  &none     &R3C5 NAV BSPC
-                                           &to(5) 	 &to(4)  &lt HRM ENTER &to(0)     
+                               &lt FXN ESC &R3C1 HRM SPACE	&none     &mo_tog 1 1
+                                           &none &lt NAV TAB  &none     &R3C5 HRM BSPC
+                                           &to(5) 	 &to(4)  &lt NAV ENTER &to(0)     
             >;
         };
 
