@@ -155,7 +155,7 @@
 
         default_layer {
 // -------------------------------------------------------------------------------------------------------------------------
-// |    Q    |    C    |    H    |    P    |    V    |                   |    W    |    Y    |    O    |    J    |    Z    |
+// |    Q    |    C    |    H    |    P    |    V    |                   |    J    |    Y    |    O    |    W    |    Z    |
 // |    R    |    S    |    N    |    T    |    .    |                   |    '    |    U    |    E    |    A    |    I    |
 // |    X    |    M    |    L    |    D    |    ;    |                   |    -    |    F    |    K    |    G    |    B    |
 //           |         |         |                                                           |         |         |
@@ -163,7 +163,7 @@
 //                                         |         |  LSHFT  |    x    |  BSPC   |
 //                                         |         |         |         |  layer  |
             bindings = <
-&kp Q		&kp C		&kp H		&kp P		&kp V			&kp W		&kp Y		&kp O		&kp J		&kp Z
+&kp Q		&kp C		&kp H		&kp P		&kp V			&kp J		&kp Y		&kp O		&kp W		&kp Z
 //&kp R		&kp S		&kp N		&kp T		&R1C4			&kp APOS	&kp U		&kp E		&kp A		&kp I
 &hm LGUI R	&hm LALT S	&hm LCTRL N	&hm LSHFT T	&R1C4			&kp APOS	&hm RSHFT U	&hm RCTRL E	&hm RALT A	&hm RGUI I
 &kp X		&kp M		&kp L		&kp D		&kp SEMI		&kp MINUS	&kp F		&kp K		&kp G		&kp B
