@@ -1,11 +1,13 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/ftc/     # <--- CHANGE REPO
+      url-base: https://github.com/zmkfirmware
+    - name: Luberry
+      url-base: https://github.com/Luberry/zmk/tree/pmw3389
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: mouse-ftc                   # <--- CHANGE REVISION
+      remote: Luberry
+      revision: pmw3389
       import: app/west.yml
   self:
     path: config
