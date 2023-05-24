@@ -3,7 +3,7 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: Luberry
-      url-base: https://github.com/Luberry/zmk/tree/pmw3389
+      url-base: https://github.com/Luberry/
   projects:
     - name: zmk
       remote: Luberry
