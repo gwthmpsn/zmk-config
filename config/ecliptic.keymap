@@ -89,7 +89,8 @@
 				= <&macro_tap     &kp RS(T) &kp H>
 				;
 		};
-		combos {
+	};
+	combos {
 		compatible = "zmk,combos";
 			combo_th {
 				timeout-ms = <30>;
@@ -175,7 +176,7 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "HOMEROW_MODS";
 			#binding-cells = <2>;
-			tapping-term-ms = <200>;    // <---[[moderate duration]]
+			tapping-term-ms = <300>;    // <---[[moderate duration, was 200]]
 			quick-tap-ms = <50>;
 			flavor = "balanced";
 			bindings = <&kp>, <&kp>;
