@@ -89,6 +89,11 @@
 			key-positions = <12 13>;
 			bindings = <&th>;
 			};
+		combo_Th {
+			timeout-ms = <30>;
+			key-positions = <12 13 16>;
+			bindings = <&th>;
+			};
 	};
 	behaviors {
 		mo_tog: behavior_mo_tog {
