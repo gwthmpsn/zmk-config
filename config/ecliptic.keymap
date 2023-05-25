@@ -86,10 +86,7 @@
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
-				= <&macro_press   &kp RSHFT>
-				, <&macro_tap     &kp T>
-				, <&macro_release &kp RSHFT>
-				, <&macro_tap     &kp H>
+				= <&macro_tap     &kp RS(T) &kp H>
 				;
 		};
 		combos {
