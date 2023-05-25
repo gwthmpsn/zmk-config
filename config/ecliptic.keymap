@@ -78,7 +78,7 @@
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
-				= <&macro_tap     &kp T &kp H>
+				= <&macro_tap     &kp T &kp H>;
 				;
 		};
 		Th: Th {
@@ -95,14 +95,14 @@
 				timeout-ms = <30>;
 				key-positions = <12 13>;
 				bindings = <&th>;
-				layers = <0>
+				layers = <0>;
 				};
 			};
 			combo_Th {
 				timeout-ms = <30>;
 				key-positions = <12 13 16>;
 				bindings = <&Th>;
-				layers = <0>
+				layers = <0>;
 				};
 			};
 	};
