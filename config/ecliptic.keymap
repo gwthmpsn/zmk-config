@@ -78,15 +78,9 @@
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
-				= <&macro_tap     &kp T &kp H>
-				;
-		};
-		shft_th: shft_th {
-			label = "shft_th";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-				= <&macro_tap     &kp RS(T) &kp H>
+				= <&macro_tap     &kp T>
+				, <&macro_release &kp LSHFT>
+				, <&macro_tap     &kp H>
 				;
 		};
 		wh: wh {
@@ -94,7 +88,9 @@
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
-				= <&macro_tap     &kp W &kp H>
+				= <&macro_tap     &kp W>
+				, <&macro_release &kp LSHFT>
+				, <&macro_tap     &kp H>
 				;
 		};
 		ch: ch {
@@ -153,16 +149,10 @@
 			key-positions = <12 13>;
 			bindings = <&th>;
 			};
-		combo_shft_th {
-			timeout-ms = <30>;
-			key-positions = <11 13>;
-			bindings = <&shft_th>;
-			};
 		combo_wh {
 			timeout-ms = <30>;
-			key-positions = <3 11>;
+			key-positions = <3 13>;
 			bindings = <&wh>;
-			slow-release = <true>;
 			};
 		combo_ch {
 			timeout-ms = <30>;
@@ -181,12 +171,12 @@
 			};
 		combo_gh {
 			timeout-ms = <30>;
-			key-positions = <12 28>;
+			key-positions = <17 28>;
 			bindings = <&gh>;
 			};
 		combo_ing {
 			timeout-ms = <30>;
-			key-positions = <12 19>;
+			key-positions = <18 19>;
 			bindings = <&ing>;
 			};
 	};
@@ -259,7 +249,7 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "HOMEROW_MODS";
 			#binding-cells = <2>;
-			tapping-term-ms = <300>;    // <---[[moderate duration, was 200]]
+			tapping-term-ms = <200>;    // <---[[moderate duration, was 200]]
 			quick-tap-ms = <50>;
 			flavor = "balanced";
 			bindings = <&kp>, <&kp>;
