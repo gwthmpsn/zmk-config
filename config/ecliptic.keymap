@@ -89,6 +89,14 @@
 				= <&macro_tap     &kp RS(T) &kp H>
 				;
 		};
+		ing: ing {
+			label = "ing";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap     &kp I &kp N &kp G>
+				;
+		};
 	};
 	combos {
 		compatible = "zmk,combos";
@@ -101,6 +109,11 @@
 			timeout-ms = <30>;
 			key-positions = <11 13>;
 			bindings = <&shft_th>;
+			};
+		combo_ing {
+			timeout-ms = <30>;
+			key-positions = <13 19>;
+			bindings = <&ing>;
 			};
 	};
 	behaviors {
