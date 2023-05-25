@@ -144,30 +144,30 @@
 	};
 	combos {
 		compatible = "zmk,combos";
-		combo_th {
+		combo_ch {
 			timeout-ms = <30>;
-			key-positions = <12 13>;
-			bindings = <&th>;
+			key-positions = <1 12>;
+			bindings = <&ch>;
 			};
 		combo_wh {
 			timeout-ms = <30>;
-			key-positions = <3 13>;
+			key-positions = <2 13>;
 			bindings = <&wh>;
 			};
-		combo_ch {
+		combo_ph {
 			timeout-ms = <30>;
-			key-positions = <2 12>;
-			bindings = <&ch>;
+			key-positions = <3 12>;
+			bindings = <&ph>;
 			};
 		combo_sh {
 			timeout-ms = <30>;
 			key-positions = <11 12>;
 			bindings = <&sh>;
 			};
-		combo_ph {
+		combo_th {
 			timeout-ms = <30>;
-			key-positions = <4 12>;
-			bindings = <&ph>;
+			key-positions = <12 13>;
+			bindings = <&th>;
 			};
 		combo_gh {
 			timeout-ms = <30>;
