@@ -81,14 +81,14 @@
 				= <&macro_tap     &kp T &kp H>
 				;
 		};
-		combos {
+	};
+	combos {
 		compatible = "zmk,combos";
 		combo_th {
 			timeout-ms = <30>;
 			key-positions = <12 13>;
 			bindings = <&th>;
 			};
-		};
 	};
 	behaviors {
 		mo_tog: behavior_mo_tog {
