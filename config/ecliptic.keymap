@@ -81,14 +81,33 @@
 				= <&macro_tap     &kp T &kp H>
 				;
 		};
+		Th: Th {
+			label = "Th";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_press   &kp RSHFT>
+				, <&macro_tap     &kp T>
+				, <&macro_release &kp RSHFT>
+				, <&macro_tap     &kp H>
+				;
+		};
 		combos {
 		compatible = "zmk,combos";
-		combo_th {
-			timeout-ms = <50>;
-			key-positions = <12 13>;
-			bindings = <&th>;
+			combo_th {
+				timeout-ms = <30>;
+				key-positions = <12 13>;
+				bindings = <&th>;
+				layers = <0>
+				};
 			};
-		};
+			combo_Th {
+				timeout-ms = <30>;
+				key-positions = <12 13 16>;
+				bindings = <&Th>;
+				layers = <0>
+				};
+			};
 	};
 	behaviors {
 		mo_tog: behavior_mo_tog {
