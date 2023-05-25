@@ -162,7 +162,7 @@
 			timeout-ms = <30>;
 			key-positions = <3 11>;
 			bindings = <&wh>;
-			slow_release = true;
+			slow-release = true;
 			};
 		combo_ch {
 			timeout-ms = <30>;
