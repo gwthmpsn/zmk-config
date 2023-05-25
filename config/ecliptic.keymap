@@ -98,7 +98,7 @@
 				bindings = <&th>;
 				layers = <0>;
 			};
-			combo_th {	
+			combo_Th {	
 				timeout-ms = <30>;
 				key-positions = <11 13>;
 				bindings = <&Th>;
