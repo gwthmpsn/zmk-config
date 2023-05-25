@@ -89,22 +89,19 @@
 				= <&macro_tap     &kp RS(T) &kp H>
 				;
 		};
-	};
-	combos {
+		combos {
 		compatible = "zmk,combos";
-			combo_th {	
-				timeout-ms = <30>;
-				key-positions = <12 13>;
-				bindings = <&th>;
-				layers = <0>;
+		combo_th {
+			timeout-ms = <30>;
+			key-positions = <12 13>;
+			bindings = <&th>;
 			};
-			combo_Th {	
-				timeout-ms = <30>;
-				key-positions = <11 13>;
-				bindings = <&Th>;
-				layers = <0>;
+		combo_Th {
+			timeout-ms = <30>;
+			key-positions = <11 13>;
+			bindings = <&Th>;
 			};
-	};
+		};
 	behaviors {
 		mo_tog: behavior_mo_tog {
 			compatible = "zmk,behavior-hold-tap";
