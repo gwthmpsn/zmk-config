@@ -89,6 +89,54 @@
 				= <&macro_tap     &kp RS(T) &kp H>
 				;
 		};
+		wh: wh {
+			label = "wh";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap     &kp W &kp H>
+				;
+		};
+		ch: ch {
+			label = "ch";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap     &kp C>
+				, <&macro_release &kp LSHFT>
+				, <&macro_tap     &kp H>
+				;
+		};
+		sh: sh {
+			label = "sh";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap     &kp S>
+				, <&macro_release &kp LSHFT>
+				, <&macro_tap     &kp H>
+				;
+		};
+		ph: ph {
+			label = "ph";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap     &kp P>
+				, <&macro_release &kp LSHFT>
+				, <&macro_tap     &kp H>
+				;
+		};
+		gh: gh {
+			label = "gh";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap     &kp G>
+				, <&macro_release &kp LSHFT>
+				, <&macro_tap     &kp H>
+				;
+		};
 		ing: ing {
 			label = "ing";
 			compatible = "zmk,behavior-macro";
@@ -110,9 +158,35 @@
 			key-positions = <11 13>;
 			bindings = <&shft_th>;
 			};
+		combo_wh {
+			timeout-ms = <30>;
+			key-positions = <3 11>;
+			bindings = <&wh>;
+			slow_release = true;
+			};
+		combo_ch {
+			timeout-ms = <30>;
+			key-positions = <2 12>;
+			bindings = <&ch>;
+			};
+		combo_sh {
+			timeout-ms = <30>;
+			key-positions = <11 12>;
+			bindings = <&sh>;
+			};
+		combo_ph {
+			timeout-ms = <30>;
+			key-positions = <4 12>;
+			bindings = <&ph>;
+			};
+		combo_gh {
+			timeout-ms = <30>;
+			key-positions = <12 28>;
+			bindings = <&gh>;
+			};
 		combo_ing {
 			timeout-ms = <30>;
-			key-positions = <13 19>;
+			key-positions = <12 19>;
 			bindings = <&ing>;
 			};
 	};
