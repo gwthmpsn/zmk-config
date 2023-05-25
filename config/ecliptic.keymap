@@ -89,9 +89,9 @@
 			key-positions = <12 13>;
 			bindings = <&th>;
 			};
-		combo_Th {
+		combo_shft_th {
 			timeout-ms = <30>;
-			key-positions = <12 13 16>;
+			key-positions = <11 13>;
 			bindings = <&th>;
 			};
 	};
