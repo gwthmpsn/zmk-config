@@ -81,15 +81,28 @@
 				= <&macro_tap     &kp T &kp H>
 				;
 		};
+		Th: Th {
+			label = "Th";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap     &kp RS(T) &kp H>
+				;
+		};
 	};
 	combos {
 		compatible = "zmk,combos";
-			combo_th {
+			combo_th {	
 				timeout-ms = <30>;
 				key-positions = <12 13>;
 				bindings = <&th>;
 				layers = <0>;
-				};
+			};
+			combo_Th {
+				timeout-ms = <30>;
+				key-positions = <12 13 16>;
+				bindings = <&Th>;
+				layers = <0>;
 			};
 	};
 	behaviors {
