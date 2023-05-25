@@ -81,8 +81,8 @@
 				= <&macro_tap     &kp T &kp H>
 				;
 		};
-		shft_th: shft_th {
-			label = "shft_th";
+		Th: Th {
+			label = "Th";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
@@ -98,10 +98,10 @@
 				bindings = <&th>;
 				layers = <0>;
 			};
-			combo_Th {
+			combo_th {	
 				timeout-ms = <30>;
-				key-positions = <12 13 16>;
-				bindings = <&shft_th>;
+				key-positions = <11 13>;
+				bindings = <&Th>;
 				layers = <0>;
 			};
 	};
