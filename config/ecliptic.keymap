@@ -81,14 +81,6 @@
 				= <&macro_tap     &kp T &kp H>
 				;
 		};
-		Th: Th {
-			label = "Th";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-				= <&macro_tap     &kp RS(T) &kp H>
-				;
-		};
 		combos {
 		compatible = "zmk,combos";
 		combo_th {
@@ -96,12 +88,8 @@
 			key-positions = <12 13>;
 			bindings = <&th>;
 			};
-		combo_Th {
-			timeout-ms = <30>;
-			key-positions = <11 13>;
-			bindings = <&Th>;
-			};
 		};
+	};
 	behaviors {
 		mo_tog: behavior_mo_tog {
 			compatible = "zmk,behavior-hold-tap";
