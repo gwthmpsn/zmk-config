@@ -173,33 +173,33 @@
             >;
         };
 
-	// Symbonumeric layer
+	// Symbolic layer
         sym {
 			bindings = <
-    &kp EXCL	&kp AT   &kp HASH	&kp DLLR	&trans                      	&trans 		&kp AMPS	&deg     	&kp EQUAL     	&kp QMARK
-    &kp LBRC 	&kp LBKT &kp LPAR	&hm LSHFT BSLH	&kp PRCNT		  	&kp CARET	&hm RSHFT FSLH	&kp RPAR	&kp RBKT	&kp RBRC
-    &kp GRAVE 	&kp LT   &kp ASTRK 	&kp PLUS	&trans                   	&trans 		&kp MINUS	&kp FSLH	&kp GT		&kp PIPE
-              		&trans		&trans                                                                 		&trans  	&trans
-                         		&trans    	&trans                        			&trans		&trans
-							&trans    &trans    		&trans		&trans
-                                           		&trans    &trans    		&to(0)		&to(0)
+&kp EXCL	&kp AT		&kp HASH	&kp DLLR	&trans			&trans 		&kp AMPS	&deg     	&kp EQUAL     	&kp QMARK
+&hm LGUI LBRC 	&hm LALT LBKT	&hm LCTRL LPAR	&hm LSHFT BSLH	&kp PRCNT		&kp CARET	&hm RSHFT FSLH	&hm RCTRL RPAR	&hm RALT RBKT	&hm RGUI RBRC
+&kp GRAVE 	&kp LT		&kp ASTRK	&kp PLUS	&trans			&trans 		&kp MINUS	&kp FSLH	&kp GT		&kp PIPE
+		&trans		&trans											&trans  	&trans
+				&trans    	&trans							&trans		&trans
+						&trans		&trans			&trans		&trans
+						&trans		&trans			&to(0)		&to(0)
             >;
         };
 
 	// Navigation layer
         nav {
             bindings = <
-&bt BT_CLR &kp K_APP &kp C_BRI_UP &kp C_VOL_UP &kp C_PREV              &kp PG_UP &kp HOME  &kp PSCRN &kp PAUSE_BREAK &bt BT_CLR
-&kp LGUI   &kp LALT  &kp LCTRL	  &kp LSHFT    &kp C_PP                &kp INS   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  
-&udo       &rdo      &kp C_BRI_DN &kp C_VOL_DN &kp C_NEXT              &kp PG_DN &kp END   &cut 	&cpy 	  &pst
-              &trans    &trans                                                                &trans    &trans
-                                  &trans    &trans                        &trans    &trans
-                                            &trans   &trans   	&trans    &trans
-                                            &trans   &trans     &to(0)    &trans
+&bt BT_CLR	&kp K_APP	&kp C_BRI_UP	&kp C_VOL_UP	&kp C_PREV              &kp PG_UP	&kp HOME	&kp PSCRN 	&kp PAUSE_BREAK	&bt BT_CLR
+&kp LGUI	&kp LALT	&kp LCTRL	&kp LSHFT	&kp C_PP                &kp INS		&kp LEFT	&kp DOWN  	&kp UP		&kp RIGHT  
+&udo		&rdo		&kp C_BRI_DN	&kp C_VOL_DN	&kp C_NEXT              &kp PG_DN	&kp END		&cut		&cpy		&pst
+		&trans		&trans											&trans		&trans
+				&trans		&trans							&trans		&trans
+						&trans		&trans			&trans		&trans
+						&trans		&trans			&to(0)		&trans
             >;
         };
 		
-	// Function key layer
+	// Funco-numeric key layer
 		fxn {
             bindings = <
     &kp F1	&kp F2		&kp F3    	&kp F4		&kp F5        		&kp F6    	&kp F7		&kp F8    	&kp F9		&kp F10 
