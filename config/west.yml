@@ -1,25 +1,25 @@
-# manifest:
-#   remotes:
-#     - name: zmkfirmware
-#       url-base: https://github.com/zmkfirmware
-#   projects:
-#     - name: zmk
-#       remote: zmkfirmware
-#       revision: main
-#       import: app/west.yml
-#   self:
-#     path: config
-    
 manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: Luberry
-      url-base: https://github.com/Luberry/
   projects:
     - name: zmk
-      remote: Luberry
-      revision: pmw3389
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
   self:
-    path: config 
+    path: config
+    
+# manifest:
+#   remotes:
+#     - name: zmkfirmware
+#       url-base: https://github.com/zmkfirmware
+#     - name: Luberry
+#       url-base: https://github.com/Luberry/
+#   projects:
+#     - name: zmk
+#       remote: Luberry
+#       revision: pmw3389
+#       import: app/west.yml
+#   self:
+#     path: config 
