@@ -19,7 +19,5 @@ if SHIELD_TRACKTYL_LEFT || SHIELD_TRACKTYL_RIGHT
 
     config ZMK_SPLIT
         default y
-        
-    config ZMK_USB
-        default y
+
 endif
