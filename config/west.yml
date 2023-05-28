@@ -1,11 +1,22 @@
 manifest:
   remotes:
-    - name: gwthmpsn
-      url-base: https://github.com/gwthmpsn
+    - name: drorchen
+      url-base: https://github.com/drorchen
   projects:
     - name: zmk
-      remote: gwthmpsn
-      revision: drorchen
+      remote: drorchen
+      revision: trackball-support
       import: app/west.yml
   self:
     path: config
+# manifest:
+#   remotes:
+#     - name: gwthmpsn
+#       url-base: https://github.com/gwthmpsn
+#   projects:
+#     - name: zmk
+#       remote: gwthmpsn
+#       revision: drorchen
+#       import: app/west.yml
+#   self:
+#     path: config
