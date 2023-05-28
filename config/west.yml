@@ -3,9 +3,9 @@ manifest:
     - name: gwthmpsn
       url-base: https://github.com/gwthmpsn
   projects:
-    - name: zmk
+    - name: zmk-trackball
       remote: gwthmpsn
-      revision: drorchen
+      revision: main
       import: app/west.yml
   self:
     path: config
