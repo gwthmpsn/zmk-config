@@ -3,9 +3,9 @@ manifest:
     - name: gwthmpsn
       url-base: https://github.com/gwthmpsn
   projects:
-    - name: zmk
+    - name: zmk-drorchen
       remote: gwthmpsn
-      revision: luberry
+      revision: trackball-support # luberry
       import: app/west.yml
   self:
     path: config
