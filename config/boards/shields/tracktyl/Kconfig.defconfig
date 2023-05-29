@@ -12,6 +12,9 @@ if SHIELD_TRACKTYL_RIGHT
 
     config ZMK_SPLIT_BLE_ROLE_CENTRAL
         default y
+	
+	config PMW3389
+		default y
 
 endif
 
