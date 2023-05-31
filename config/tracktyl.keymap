@@ -319,7 +319,7 @@
                                             	&trans 	 	&trans   		&trans    	&trans
                                             	&trans   	&trans     		&to(0)    	&trans
             >;
-        };&mkp LCLK &mkp RCLK &mo L_SCROLL 
+        };
 	
 	// mouse layer
 		trans {
