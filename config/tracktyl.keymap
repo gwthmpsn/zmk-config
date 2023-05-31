@@ -9,8 +9,9 @@
 #define NAV   	2
 #define FXN	3
 #define MSE 4
-#define QWT	5
-#define LGE	6
+#define SCL 5
+#define QWT	6
+#define LGE	7
 // Would love to have a greek layer :(
 
 / {
@@ -322,10 +323,24 @@
         };
 	
 	// mouse layer
-		trans {
+		mse {
             bindings = <
 &trans		&trans		&trans		&trans		&trans			&trans 		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans			&trans 		&mkp LCLK 	&mkp RCLK 	&trans		&trans
+&trans		&trans		&trans		&trans		&trans			&trans 		&mkp LCLK 	&mkp RCLK 	&mo SCL		&trans
+&trans 		&trans		&trans		&trans		&trans			&trans 		&trans		&trans		&trans		&trans
+		&trans		&trans											&trans		&trans
+				&trans		&trans							&trans		&trans
+                                            	&trans 	 	&trans			&trans		&trans
+                                            	&to(0)   	&trans			&to(0)		&trans
+            >;
+        };
+		
+		
+	// scroll layer
+		scl {
+            bindings = <
+&trans		&trans		&trans		&trans		&trans			&trans 		&trans		&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans			&trans 		&trans 		&trans 		&trans		&trans
 &trans 		&trans		&trans		&trans		&trans			&trans 		&trans		&trans		&trans		&trans
 		&trans		&trans											&trans		&trans
 				&trans		&trans							&trans		&trans
