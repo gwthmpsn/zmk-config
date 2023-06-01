@@ -268,12 +268,12 @@
 //                                         |         |         |         |  layer  |
             bindings = <
 &kp Q		&kp C		&kp W		&kp P		&kp V			&kp H		&kp Y		&kp O		&kp K		&kp Z
-&hm LGUI R	&hm LALT S	&hm LCTRL N	&hm LSHFT T	&per_com		&kp APOS	&hm RSHFT U	&hm RCTRL E	&hm RALT A	&td_mse
+&hm LGUI R	&hm LALT S	&hm LCTRL N	&hm LSHFT T	&per_com		&kp APOS	&hm RSHFT U	&hm RCTRL E	&hm RALT A	&&lt MSE I
 &kp X		&kp M		&kp L		&kp D		&kp SEMI		&kp MINUS	&kp F		&kp J		&kp G		&kp B
 		&none		&none                                                                  			&none		&none
-                               	&lt FXN ESC	&spc_entr						&none		&lt NAV ENTER
+                               	&lt FXN ESC	&spc_entr						&none		&bspc_del
                                            	&none		&lt NAV TAB		&none		&to(4)
-						&to(5)		&to(6)			&mo_tog 1 1	&bspc_del    
+						&to(5)		&to(6)			&mo_tog 1 1	&lt NAV ENTER    
             >;
         };
 
