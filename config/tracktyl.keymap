@@ -207,7 +207,7 @@
 			#binding-cells = <0>;
 			bindings = <&kp PERIOD>, <&kp COMMA>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
-			masked_mods = <(MOD_LSFT|MOD_RSFT)>;
+			masked-mods = <(MOD_LSFT|MOD_RSFT)>;
 		};	
 		spc_entr: spc_entr {							// SPACE ENTER
 			compatible = "zmk,behavior-mod-morph";
