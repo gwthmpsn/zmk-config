@@ -201,34 +201,13 @@
 			tapping-term-ms = <200>;
 			bindings = <&mo>, <&to>;
 		};
-		R1C4: R1C4 {								// . ,
+		per_com: per_com {								// . ,
 			compatible = "zmk,behavior-mod-morph";
-			label = "R1C4";
+			label = "per_com";
 			#binding-cells = <0>;
 			bindings = <&kp PERIOD>, <&kp COMMA>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};	
-		R0C7: R0C7 {								// 8 deg
-			compatible = "zmk,behavior-mod-morph";
-			label = "R0C7";
-			#binding-cells = <0>;
-			bindings = <&kp KP_N8>, <&deg>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};	
-		R0C8: R0C8 {								// 9 =
-			compatible = "zmk,behavior-mod-morph";
-			label = "R0C8";
-			#binding-cells = <0>;
-			bindings = <&kp KP_N9>, <&kp EQUAL>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};	
-			R0C9: R0C9 {							// 0 ?
-			compatible = "zmk,behavior-mod-morph";
-			label = "R0C9";
-			#binding-cells = <0>;
-			bindings = <&kp KP_N0>, <&kp QMARK>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
 		spc_entr: spc_entr {							// SPACE ENTER
 			compatible = "zmk,behavior-mod-morph";
 			label = "spc_entr";
@@ -289,7 +268,7 @@
 //                                         |         |         |         |  layer  |
             bindings = <
 &kp Q		&kp C		&kp W		&kp P		&kp V			&kp H		&kp Y		&kp O		&kp K		&kp Z
-&hm LGUI R	&hm LALT S	&hm LCTRL N	&hm LSHFT T	&R1C4			&kp APOS	&hm RSHFT U	&hm RCTRL E	&hm RALT A	&td_mse
+&hm LGUI R	&hm LALT S	&hm LCTRL N	&hm LSHFT T	&per_com		&kp APOS	&hm RSHFT U	&hm RCTRL E	&hm RALT A	&td_mse
 &kp X		&kp M		&kp L		&kp D		&kp SEMI		&kp MINUS	&kp F		&kp J		&kp G		&kp B
 		&none		&none                                                                  			&none		&none
                                	&lt FXN ESC	&spc_entr						&none		&lt NAV ENTER
