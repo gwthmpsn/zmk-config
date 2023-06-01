@@ -193,6 +193,14 @@
 			tapping-term-ms = <200>;
 			bindings = <&mo>, <&tog>;
 		};
+		mo_to: behavior_mo_to {
+			compatible = "zmk,behavior-hold-tap";
+			label = "mo_to";
+			#binding-cells = <2>;
+			flavor = "hold-preferred";
+			tapping-term-ms = <200>;
+			bindings = <&mo>, <&to>;
+		};
 		R1C4: R1C4 {								// . ,
 			compatible = "zmk,behavior-mod-morph";
 			label = "R1C4";
@@ -284,9 +292,9 @@
 &hm LGUI R	&hm LALT S	&hm LCTRL N	&hm LSHFT T	&R1C4			&kp APOS	&hm RSHFT U	&hm RCTRL E	&hm RALT A	&td_mse
 &kp X		&kp M		&kp L		&kp D		&kp SEMI		&kp MINUS	&kp F		&kp J		&kp G		&kp B
 		&none		&none                                                                  			&none		&none
-                               	&lt FXN ESC	&spc_entr						&none		&bspc_del
+                               	&lt FXN ESC	&spc_entr						&none		&lt NAV ENTER
                                            	&none		&lt NAV TAB		&none		&to(4)
-						&to(5)		&to(6)			&mo_tog 1 1	&lt NAV ENTER    
+						&to(5)		&to(6)			&mo_tog 1 1	&bspc_del    
             >;
         };
 
@@ -333,7 +341,7 @@
 		mse {
             bindings = <
 &trans		&trans		&trans		&trans		&trans			&trans 		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans			&trans 		&mkp LCLK 	&mkp RCLK 	&mo SCL		&none
+&trans		&trans		&trans		&trans		&trans			&trans 		&mkp LCLK 	&mkp RCLK 	&mo SCL		&mo_to 4 1
 &trans 		&trans		&trans		&trans		&trans			&trans 		&trans		&trans		&trans		&to(0)
 		&trans		&trans											&trans		&trans
 				&trans		&trans							&trans		&trans
