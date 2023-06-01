@@ -284,9 +284,9 @@
 &hm LGUI R	&hm LALT S	&hm LCTRL N	&hm LSHFT T	&R1C4			&kp APOS	&hm RSHFT U	&hm RCTRL E	&hm RALT A	&td_mse
 &kp X		&kp M		&kp L		&kp D		&kp SEMI		&kp MINUS	&kp F		&kp J		&kp G		&kp B
 		&none		&none                                                                  			&none		&none
-                               	&lt FXN ESC	&spc_entr						&none		&mo_tog 1 1
-                                           	&none		&lt NAV TAB		&none		&bspc_del
-						&to(5)		&to(6)			&lt NAV ENTER	&to(4)     
+                               	&lt FXN ESC	&spc_entr						&none		&bspc_del
+                                           	&none		&lt NAV TAB		&none		&to(4)
+						&to(5)		&to(6)			&mo_tog 1 1	&lt NAV ENTER    
             >;
         };
 
