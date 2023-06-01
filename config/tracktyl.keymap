@@ -258,7 +258,14 @@
 			flavor = "balanced";
 			bindings = <&kp>, <&kp>;
 		};
-	    };
+		td_mse: tap_dance_mouse {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_MOD_TAP";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&lt MSE I>, <&to(4)>;
+        };
+	};
 
 	keymap {
 		compatible = "zmk,keymap";
@@ -274,7 +281,7 @@
 //                                         |         |         |         |  layer  |
             bindings = <
 &kp Q		&kp C		&kp W		&kp P		&kp V			&kp H		&kp Y		&kp O		&kp K		&kp Z
-&hm LGUI R	&hm LALT S	&hm LCTRL N	&hm LSHFT T	&R1C4			&kp APOS	&hm RSHFT U	&hm RCTRL E	&hm RALT A	&lt MSE I
+&hm LGUI R	&hm LALT S	&hm LCTRL N	&hm LSHFT T	&R1C4			&kp APOS	&hm RSHFT U	&hm RCTRL E	&hm RALT A	&td_mse
 &kp X		&kp M		&kp L		&kp D		&kp SEMI		&kp MINUS	&kp F		&kp J		&kp G		&kp B
 		&none		&none                                                                  			&none		&none
                                	&lt FXN ESC	&spc_entr						&none		&mo_tog 1 1
@@ -287,7 +294,7 @@
         sym {
 			bindings = <
 &kp EXCL	&kp AT		&kp HASH	&kp DLLR	&kp PRCNT		&kp CARET	&kp AMPS	&deg     	&kp EQUAL     	&kp QMARK
-&hm LGUI LBRC 	&hm LALT LBKT	&hm LCTRL LPAR	&hm LSHFT BSLH	&trans			&trans		&hm RSHFT FSLH	&hm RCTRL RPAR	&hm RALT RBKT	&lt MSE RBRC
+&hm LGUI LBRC 	&hm LALT LBKT	&hm LCTRL LPAR	&hm LSHFT BSLH	&trans			&trans		&hm RSHFT FSLH	&hm RCTRL RPAR	&hm RALT RBKT	&kp RBRC
 &kp GRAVE 	&kp LT		&kp ASTRK	&kp PLUS	&trans			&trans 		&kp MINUS	&kp FSLH	&kp GT		&kp PIPE
 		&trans		&trans											&trans  	&trans
 				&trans    	&trans							&trans		&trans
@@ -300,7 +307,7 @@
         nav {
             bindings = <
 &bt BT_CLR	&kp K_APP	&kp C_BRI_UP	&kp C_VOL_UP	&kp C_PREV              &kp PG_UP	&kp HOME	&kp PSCRN 	&kp PAUSE_BREAK	&bt BT_CLR
-&kp LGUI	&kp LALT	&kp LCTRL	&kp LSHFT	&kp C_PP                &kp INS		&kp LEFT	&kp DOWN  	&kp UP		&lt MSE RIGHT  
+&kp LGUI	&kp LALT	&kp LCTRL	&kp LSHFT	&kp C_PP                &kp INS		&kp LEFT	&kp DOWN  	&kp UP		&kp RIGHT  
 &udo		&rdo		&kp C_BRI_DN	&kp C_VOL_DN	&kp C_NEXT              &kp PG_DN	&kp END		&cut		&cpy		&pst
 		&trans		&trans											&trans		&trans
 				&trans		&trans							&trans		&trans
@@ -313,7 +320,7 @@
 		fxn {
             bindings = <
     &kp F1	&kp F2		&kp F3    	&kp F4		&kp F5        		&kp F6    	&kp F7		&kp F8    	&kp F9		&kp F10 
-    &kp KP_N1	&kp KP_N2	&kp KP_N3  	&kp KP_N4	&kp KP_N5		&kp KP_N6	&kp KP_N7     	&kp KP_N8 	&kp KP_N9	&lt MSE KP_N0  
+	&hm LGUI KP_N1 	&hm LALT KP_N2	&hm LCTRL KP_N3	&hm LSHFT KP_N4 &kp KP_N5 &kp KP_N6 &hm RSHFT KP_N7 &hm RCTRL KP_N8 &hm RALT KP_N9 &hm RGUI KP_N0
     &none     	&none  		&none 	  	&none 		&kp F11         	&kp F12 	&none		&none		&none		&none    
               	&trans    	&trans                                                                			&trans		&trans
                                 &trans		&trans                        				&trans    	&trans
@@ -326,7 +333,7 @@
 		mse {
             bindings = <
 &trans		&trans		&trans		&trans		&trans			&trans 		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans			&trans 		&mkp LCLK 	&mkp RCLK 	&mo SCL		&trans
+&trans		&trans		&trans		&trans		&trans			&trans 		&mkp LCLK 	&mkp RCLK 	&mo SCL		&to(0)
 &trans 		&trans		&trans		&trans		&trans			&trans 		&trans		&trans		&trans		&trans
 		&trans		&trans											&trans		&trans
 				&trans		&trans							&trans		&trans
