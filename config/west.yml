@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: zmk
       remote: gwthmpsn
-      revision: drorchen
+      revision: pmw3389
       import: app/west.yml
   self:
     path: config
