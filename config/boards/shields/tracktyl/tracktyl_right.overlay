@@ -46,6 +46,6 @@ trackball_spi: &spi0 {
     compatible = "nordic,nrf-spim";
     status = "okay";
     pinctrl-0 = <&spi0_default>;
-    pinctrl-names = "default";
+    pinctrl-names = "default","sleep";
     cs-gpios = <&gpio0 24 GPIO_ACTIVE_HIGH>;
 };
