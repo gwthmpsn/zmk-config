@@ -43,7 +43,7 @@
 */
 
 trackball_spi: &spi0 {
-    compatible = "nordic,nrf-spim";
+    compatible = "pixart,pmw3360";
     status = "okay";
     pinctrl-0 = <&spi0_default>;
 	pinctrl-1 = <&spi0_sleep>;
