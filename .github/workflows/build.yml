@@ -2,4 +2,4 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: gwthmpsn/zmk/tree/pmw3389/.github/workflows/build-user-config.yml
+    uses: gwthmpsn/zmk/.github/workflows/build-user-config.yml@pmw3389
