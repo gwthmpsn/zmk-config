@@ -49,5 +49,5 @@ trackball_spi: &spi0 {
 	pinctrl-1 = <&spi0_sleep>;
     pinctrl-names = "default","sleep";
     cs-gpios = <&gpio0 24 GPIO_ACTIVE_HIGH>;
-	irq-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
+	irq-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
 };
