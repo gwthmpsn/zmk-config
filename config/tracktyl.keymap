@@ -283,7 +283,7 @@
 //                                         |         |         |         |  layer  |
             bindings = <
 &kp Q		&kp C		&kp W		&kp P		&kp V			&kp H		&kp Y		&kp O		&kp K		&kp Z
-&hm LGUI R	&hm LALT S	&hm LCTRL N	&hm LSHFT T	&per_com		&kp APOS	&hm RSHFT U	&hm RCTRL E	&hm RALT A	&to(4) I
+&hm LGUI R	&hm LALT S	&hm LCTRL N	&hm LSHFT T	&per_com		&kp APOS	&hm RSHFT U	&hm RCTRL E	&hm RALT A	&lt MSE I
 &kp X		&kp M		&kp L		&kp D		&kp SEMI		&kp MINUS	&kp F		&kp J		&kp G		&kp B
 		&none		&none                                                                  			&none		&none
                                	&lt FXN ESC	&spc_entr						&none		&bspc_del
