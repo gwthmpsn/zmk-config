@@ -42,7 +42,7 @@
 };
 */
 
-trackball_spi: &spi1 {
+trackball: trackball {
     compatible = "pixart,pmw3360";
     status = "okay";
 	irq-gpios = <&gpio0 0 GPIO_ACTIVE_HIGH>;
