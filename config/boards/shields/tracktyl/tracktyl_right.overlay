@@ -22,22 +22,10 @@
             ;
 };
 
-/*
-&pro_micro_spi {
-    status = "okay";
-
-    miso-pin = <17>; // P0.17
-    mosi-pin = <20>; // P0.20
-    sck-pin = <22>; // P0.22
-    cs-gpios = <&gpio0 24 GPIO_ACTIVE_LOW>; // P0.24
-
+&spi1 {
     trackball: trackball@0 {
         compatible = "pixart,pmw3360";
-        reg = <0>;
-        label = "Pixart PMW3360";
+		status = "okay";
         irq-gpios = <&gpio0 0 GPIO_ACTIVE_LOW>;
-        spi-max-frequency = <2000000>;
-        scroll-layer = <5>;
     };
 };
-*/
