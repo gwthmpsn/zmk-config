@@ -268,8 +268,7 @@
 &kp Q		&kp C		&kp W		&kp P		&kp V			&kp H		&kp Y		&kp O		&kp K		&kp Z
 &hm LGUI R	&hm LALT S	&hm LCTRL N	&hm LSHFT T	&R1C4			&kp APOS	&hm RSHFT U	&hm RCTRL E	&hm RALT A	&hm RGUI I
 &kp X		&kp M		&kp L		&kp D		&kp SEMI		&kp MINUS	&kp F		&kp J		&kp G		&kp B
-                        &kp KP_N1	&kp KP_N2	&kp KP_N3		&kp KP_N4 &kp KP_N5	&kp KP_N6
-                        //&lt FXN ESC	&spc_entr	&lt NAV TAB		&lt NAV ENTER &bspc_del	&mo_tog 1 1
+                        &lt FXN ESC	&spc_entr	&lt NAV TAB		&lt NAV ENTER &bspc_del	&mo_tog 1 1
             >;
         };
 
