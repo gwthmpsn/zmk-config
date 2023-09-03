@@ -1,11 +1,11 @@
 file_format: "1"
-id: ecliptic
-name: Ecliptic
+id: chocofi
+name: chocofi
 type: shield
 url: https://github.com/gwthmpsn/zmk-config/
 requires: [pro_micro]
 features:
   - keys
 siblings:
-  - ecliptic_left
-  - ecliptic_right
+  - chocofi_left
+  - chocofi_right

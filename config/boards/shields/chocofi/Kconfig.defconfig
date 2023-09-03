@@ -1,14 +1,14 @@
-if SHIELD_ECLIPTIC_LEFT
+if SHIELD_CHOCOFI_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Ecliptic Left"
+    default "Chocofi Left"
 
 endif
 
-if SHIELD_ECLIPTIC_RIGHT
+if SHIELD_CHOCOFI_RIGHT
 
 config ZMK_KEYBOARD_NAME
-    default "Ecliptic Right"
+    default "Chocofi Right"
     
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y
@@ -17,7 +17,7 @@ config ZMK_USB
     default y
 endif
 
-if SHIELD_ECLIPTIC_LEFT || SHIELD_ECLIPTIC_RIGHT
+if SHIELD_CHOCOFI_LEFT || SHIELD_CHOCOFI_RIGHT
 
 config ZMK_SPLIT
     default y
