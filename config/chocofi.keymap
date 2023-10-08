@@ -127,8 +127,18 @@
 			#binding-cells = <0>;
 			bindings
 				= <&macro_tap     &kp G>
-				, <&macro_release &kp RSHFT>
+				, <&macro_release &kp LSHFT>
 				, <&macro_tap     &kp H>
+				;
+		};
+		qu: qu {
+			label = "qu";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap     &kp Q>
+				, <&macro_release &kp LSHFT>
+				, <&macro_tap     &kp U>
 				;
 		};
 		ing: ing {
@@ -171,6 +181,11 @@
 			timeout-ms = <30>;
 			key-positions = <17 28>;
 			bindings = <&gh>;
+			};
+		combo_qu {
+			timeout-ms = <30>;
+			key-positions = <16 17>;
+			bindings = <&qu>;
 			};
 		combo_ing {
 			timeout-ms = <30>;
