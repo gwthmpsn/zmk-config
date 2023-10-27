@@ -313,7 +313,7 @@
             bindings = <
 &kp F1		&kp F2		&kp F3    	&kp F4		&kp F5        		&kp F6    	&kp F7		&kp F8    	&kp F9		&kp F10 
 &kp KP_N1	&hm LALT KP_N2	&hm LCTRL KP_N3	&hm LSHFT KP_N4	&kp KP_N5		&kp KP_N6	&hm RSHFT KP_N7	&hm RCTRL KP_N8	&hm RALT KP_N9	&kp KP_N0  
-&kp LGUI     	&KP_NUM  		&none 	  	&none 		&kp F11         	&kp F12 	&none		&none		&none		&kp RGUI    
+&kp LGUI     	&kp KP_NUM  	&none 	  	&none 		&kp F11         	&kp F12 	&none		&none		&none		&kp RGUI    
               			&trans		&trans		&trans  		&trans		&trans    	&trans
 
             >;
