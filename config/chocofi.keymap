@@ -159,12 +159,12 @@
 			};
 		combo_wh {
 			timeout-ms = <30>;
-			key-positions = <2 13>;
+			key-positions = <2 3>;
 			bindings = <&wh>;
 			};
 		combo_ph {
 			timeout-ms = <30>;
-			key-positions = <3 2>;
+			key-positions = <3 12>;
 			bindings = <&ph>;
 			};
 		combo_sh {
@@ -251,7 +251,7 @@
 		    	bindings = <&mo>, <&tab_etr>;
 		    	tapping-term-ms = <200>;
 		};
-		lt_bspc_del: layer_tap_bspc_del {								// I want this to be bspc, del, or layer
+		lt_bsp_del: layer_tap_bspc_del {								// I want this to be bspc, del, or layer
 			compatible = "zmk,behavior-hold-tap";
 		    	label = "LAYER_TAP_BACKSPACE_DELETE";
 		    	#binding-cells = <2>;
