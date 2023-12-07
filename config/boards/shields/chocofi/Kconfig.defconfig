@@ -1,20 +1,10 @@
 if SHIELD_CHOCOFI_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Chocofi Left"
+    default "Chocofi"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y
-
-config ZMK_USB
-    default y
-
-endif
-
-if SHIELD_CHOCOFI_RIGHT
-
-config ZMK_KEYBOARD_NAME
-    default "Chocofi Right"
 
 config ZMK_USB
     default y
