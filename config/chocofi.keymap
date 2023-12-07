@@ -154,7 +154,7 @@
 		compatible = "zmk,combos";
 		combo_ch {
 			timeout-ms = <30>;
-			key-positions = <1 12>;
+			key-positions = <1 2>;
 			bindings = <&ch>;
 			};
 		combo_wh {
@@ -164,7 +164,7 @@
 			};
 		combo_ph {
 			timeout-ms = <30>;
-			key-positions = <3 12>;
+			key-positions = <3 2>;
 			bindings = <&ph>;
 			};
 		combo_sh {
@@ -179,7 +179,7 @@
 			};
 		combo_gh {
 			timeout-ms = <30>;
-			key-positions = <17 28>;
+			key-positions = <27 28>;
 			bindings = <&gh>;
 			};
 		combo_qu {
@@ -202,32 +202,32 @@
 			tapping-term-ms = <200>;
 			bindings = <&mo>, <&tog>;
 		};
-		R1C4: R1C4 {								// . ,
+		per_com: per_com {								// . ,
 			compatible = "zmk,behavior-mod-morph";
-			label = "R1C4";
+			label = "per_com";
 			#binding-cells = <0>;
 			bindings = <&kp PERIOD>, <&kp COMMA>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};	
-		R0C7: R0C7 {								// 8 deg
+		};
+		exc_que: exc_que {								// ! ?
 			compatible = "zmk,behavior-mod-morph";
-			label = "R0C7";
+			label = "exc_que";
 			#binding-cells = <0>;
-			bindings = <&kp KP_N8>, <&deg>;
+			bindings = <&kp EXCL>, <&kp QMARK>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};	
-		R0C8: R0C8 {								// 9 =
+		};
+		ast_car: ast_car {								// * ^
 			compatible = "zmk,behavior-mod-morph";
-			label = "R0C8";
+			label = "ast_car";
 			#binding-cells = <0>;
-			bindings = <&kp KP_N9>, <&kp EQUAL>;
+			bindings = <&kp ASTRK>, <&kp CARET>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};	
-		R0C9: R0C9 {								// 0 ?
+		};
+		fsl_bsl: fsl_bsl {								// Forward and Back Slashes
 			compatible = "zmk,behavior-mod-morph";
-			label = "R0C9";
+			label = "fsl_bsl";
 			#binding-cells = <0>;
-			bindings = <&kp KP_N0>, <&kp QMARK>;
+			bindings = <&kp FSLH>, <&kp BSLH>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 		spc_entr: spc_entr {							// SPACE ENTER
@@ -243,20 +243,6 @@
 			#binding-cells = <0>;
 			bindings = <&kp BSPC>, <&kp DEL>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-		R3C1: R3C1 {								// I want this to be bspc, del, or layer
-			compatible = "zmk,behavior-hold-tap";
-		    	label = "R3C1";
-		    	#binding-cells = <2>;
-		    	bindings = <&mo>, <&spc_entr>;
-		    	tapping-term-ms = <200>;
-		};
-		R3C5: R3C5 {								// I want this to be bspc, del, or layer
-			compatible = "zmk,behavior-hold-tap";
-		    	label = "R3C5";
-		    	#binding-cells = <2>;
-		    	bindings = <&mo>, <&bspc_del>;
-		    	tapping-term-ms = <200>;
 		};
 		hm: balanced_homerow_mods {
 			compatible = "zmk,behavior-hold-tap";
@@ -276,34 +262,34 @@
 // -------------------------------------------------------------------------------------------------------------------------
 // |    Q    |    C    |    W    |    P    |    V    |                   |    H    |    Y    |    O    |    K    |    Z    |
 // |    R    |    S    |    N    |    T    |    .    |                   |    '    |    U    |    E    |    A    |    I    |
-// |    X    |    M    |    L    |    D    |    ;    |                   |    -    |    F    |    J    |    G    |    B    |
+// |    X    |    M    |    L    |    D    |    ;    |                   |    !    |    F    |    J    |    G    |    B    |
 //           		   |   ESC   |   SPC   |   TAB   |                   |   ETR   |   BSP   |	 SYM   |
 //                         fxn		 etr	   nav							 nav	   del		 sym
             bindings = <
-&kp Q		&kp C		&kp W		&kp P		&kp V			&kp H		&kp Y		&kp O		&kp K		&kp Z
-&kp R		&hm LALT S	&hm LCTRL N	&hm LSHFT T	&R1C4			&kp APOS	&hm RSHFT U	&hm RCTRL E	&hm RALT A	&kp I
-&hm LGUI X	&kp M		&kp L		&kp D		&kp SEMI		&kp MINUS	&kp F		&kp J		&kp G		&hm RGUI B
-                        	&lt FXN ESC	&spc_entr	&lt NAV TAB		&lt NAV ENTER 	&bspc_del	&mo_tog 1 1
+&kp Q		&kp C		&kp W		&kp P		&kp V					&kp H		&kp Y		&kp O		&kp K		&kp Z
+&kp R		&hm LALT S	&hm LCTRL N	&hm LSHFT T	&per_com				&kp APOS	&hm RSHFT U	&hm RCTRL E	&hm RALT A	&kp I
+&hm LGUI X	&kp M		&kp L		&kp D		&kp SEMI				&exc_que	&kp F		&kp J		&kp G		&hm RGUI B
+						&lt FXN ESC	&spc_entr	&lt NAV TAB				&lt NAV ENTER &bspc_del	&mo_tog 1 1
             >;
         };
 
 	// Symbolic layer
         sym {
 			bindings = <
-&kp GRAVE	&kp AT		&kp HASH	&kp CARET	&kp EXCL		&kp QMARK	&kp EQUAL	&kp DLLR     	&kp PRCNT     	&deg
-&kp LBRC 	&hm LALT LBKT	&hm LCTRL LPAR 	&hm LSHFT BSLH 	&trans			&trans		&hm RSHFT FSLH 	&hm RCTRL RPAR 	&hm RALT RBKT	&kp RBRC
-&hm LGUI AMPS 	&kp LT		&kp ASTRK	&kp PLUS	&trans			&trans 		&kp MINUS	&kp FSLH	&kp GT		&hm RGUI PIPE
-				&trans		&trans		&trans  		&trans		&trans    	&trans
+&kp GRAVE			&kp AT				&kp HASH			&kp LBRC			&none					&none			&kp RBKT			&kp DLLR     		&kp PRCNT     		&deg
+&hm LGUI AMPS 		&hm LALT EQUAL		&hm LCTRL KP_PLUS 	&hm LSHFT LPAR 		&trans					&trans			&hm RSHFT RPAR 		&hm RCTRL KP_MINUS 	&hm RALT UNDER 		&hm RGUI PIPE
+&none 				&kp LT				&ast_car			&kp LBRC			&trans					&trans 			&kp RBRC			&fsl_bsl			&kp GT				&none
+										&trans				&trans				&trans  				&trans			&trans    			&trans
             >;
         };
 
 	// Navigation layer
         nav {
             bindings = <
-&bt BT_CLR	&kp K_APP	&kp C_BRI_UP	&kp C_VOL_UP	&kp C_PREV              &kp PG_UP	&kp HOME	&kp PSCRN 	&kp PAUSE_BREAK	&bt BT_CLR
-&kp LGUI	&kp LALT	&kp LCTRL	&kp LSHFT	&kp C_PP                &kp INS		&kp LEFT	&kp DOWN  	&kp UP		&kp RIGHT  
-&udo		&rdo		&kp C_BRI_DN	&kp C_VOL_DN	&kp C_NEXT              &kp PG_DN	&kp END		&cut		&cpy		&pst
-				&trans		&trans		&trans  		&trans		&trans    	&trans
+&bt BT_CLR			&kp K_APP			&kp C_BRI_UP		&kp C_VOL_UP		&kp C_PREV        		&kp PG_UP		&kp HOME			&kp PSCRN 			&kp PAUSE_BREAK		&bt BT_CLR
+&kp LGUI			&kp LALT			&kp LCTRL			&kp LSHFT			&kp C_PP            	&kp INS			&kp LEFT			&kp DOWN  			&kp UP				&kp RIGHT  
+&udo				&rdo				&kp C_BRI_DN		&kp C_VOL_DN		&kp C_NEXT          	&kp PG_DN		&kp END				&cut				&cpy				&pst
+										&trans				&trans				&trans  				&trans			&trans    			&trans
 
             >;
         };
@@ -311,10 +297,10 @@
 	// Funco-numeric key layer
 		fxn {
             bindings = <
-&kp F1		&kp F2		&kp F3    	&kp F4		&kp F5        		&kp F6    	&kp F7		&kp F8    	&kp F9		&kp F10 
-&kp KP_N1	&hm LALT KP_N2	&hm LCTRL KP_N3	&hm LSHFT KP_N4	&kp KP_N5		&kp KP_N6	&hm RSHFT KP_N7	&hm RCTRL KP_N8	&hm RALT KP_N9	&kp KP_N0  
-&kp LGUI     	&kp KP_NUM  	&none 	  	&none 		&kp F11         	&kp F12 	&none		&none		&none		&kp RGUI    
-              			&trans		&trans		&trans  		&trans		&trans    	&trans
+&kp F1				&kp F2				&kp F3    			&kp F4				&kp F5        			&kp F6    		&kp F7				&kp F8    			&kp F9				&kp F10 
+&kp LGUI			&hm LALT KP_N1		&hm LCTRL KP_N2		&hm LSHFT KP_N3		&none					&none			&hm RSHFT KP_N6		&hm RCTRL KP_N7		&hm RALT KP_N8		&kp RGUI  
+&kp KP_NUM  		&none  				&kp KP_N4 	  		&kp KP_N5			&kp F11         		&kp F12 		&kp KP_N9			&kp KP_N0			&none				&kp KP_NUM    
+										&trans				&trans				&trans  				&trans			&trans    			&trans
 
             >;
         };
