@@ -293,32 +293,31 @@
 	// Symbolic layer
         sym {
 			bindings = <
-&kp GRAVE		&kp AT			&kp HASH		&kp LBKT		&none				&none			&kp RBKT		&kp DLLR     		&kp PRCNT     		&deg
+&none			&kp AT			&kp HASH		&kp LBKT		&kp GRAVE			&deg			&kp RBKT		&kp DLLR     		&kp PRCNT     		&none
 &hm LGUI AMPS 		&hm LALT EQUAL		&hm LCTRL KP_PLUS 	&hm LSHFT LPAR 		&trans				&trans			&hm RSHFT RPAR 		&hm RCTRL KP_MINUS 	&hm RALT UNDER 		&hm RGUI PIPE
-&none 			&kp LT			&ast_car		&kp LBRC		&trans				&trans 			&kp RBRC		&fsl_bsl		&kp GT			&none
-									&trans			&trans				&trans  		&trans			&trans    		&trans
+&kp LT 			&kp CARET		&kp ASTRK		&kp LBRC		&trans				&trans 			&kp RBRC		&kp FLSH		&kp BLSH		&kp GT
+						&trans			&trans			&trans		  		&trans			&trans    		&trans
             >;
         };
 
 		
-	// Funco-numeric key layer
+	// Numpad layer
 		num {
             bindings = <
-&kp F1			&kp F2			&kp F3    		&kp F4			&kp F5        			&kp F6    		&kp F7			&kp F8    		&kp F9			&kp F10 
-&hm LGUI KP_N1		&hm LALT KP_N2		&hm LCTRL KP_N3		&hm LSHFT KP_N4		&kp KP_N5			&kp KP_N6		&hm RSHFT KP_N7		&hm RCTRL KP_N8		&hm RALT KP_N9		&hm RGUI KP_N0
-&kp KP_NUM  		&none  			&none 	  		&none			&kp F11         		&kp F12 		&none			&none			&none			&kp KP_NUM    
-						&trans			&trans			&trans  			&trans			&trans    		&trans
-
+&none			&none			&none    		&none			&none        			&none    		&kp N7			&kp N8    		&kp N9			&none 
+&kp LGUI		&kp LALT		&kp LCTRL		&kp LSHFT		&none				&none			&kp N4			&kp N5			&kp N6			&none
+&none	  		&none  			&none 	  		&none			&none	         		&none	 		&kp N1			&kp N2			&kp N3			&none
+						&trans			&trans			&trans  			&trans			&kp N0    		&kp KP_DOT
             >;
         };
 
 // Function key layer
 		fxn {
             bindings = <
-&kp F1			&kp F2			&kp F3    		&kp F4			&kp F5        			&kp F6    		&kp F7			&kp F8    		&kp F9			&kp F10 
-&hm LGUI KP_N1		&hm LALT KP_N2		&hm LCTRL KP_N3		&hm LSHFT KP_N4		&kp KP_N5			&kp KP_N6		&hm RSHFT KP_N7		&hm RCTRL KP_N8		&hm RALT KP_N9		&hm RGUI KP_N0
-&kp KP_NUM  		&none  			&none 	  		&none			&kp F11         		&kp F12 		&none			&none			&none			&kp KP_NUM    
-						&trans			&trans			&trans  			&trans			&trans    		&trans
+&kp F9			&kp F10			&kp F11    		&kp F12			&kp PSCRN      			&none    		&none			&none    		&none			&none 
+&hm LGUI F5		&hm LALT F6		&hm LCTRL F7		&hm LSHFT F8		&kp INS				&none    		&none			&none    		&none			&none
+&kp F1  		&kp F2 			&kp F3 	  		&kp F4			&kp PAUSE_BREAK        		&none    		&none			&none    		&none			&none
+						&kp K_APP		&trans			&trans  			&trans			&trans    		&trans
 
             >;
         };
