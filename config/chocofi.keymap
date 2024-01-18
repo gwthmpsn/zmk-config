@@ -2,7 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/mouse.h>
-#include <greek.dtsi>
+#include "greek.dtsi"
 
 #define DEFAULT	0
 #define SYM	1
@@ -10,7 +10,7 @@
 #define FXN	3
 #define NAV	4
 #define MSE	5
-// Would love to have a greek layer :(
+#define GRK	6
 
 / {
 	macros {
@@ -272,12 +272,22 @@
 
 	// Mouse Emulation Layer
 	mse {
-            bindings = <
+            	bindings = <
 &none			&none			&none    		&none			&none        			&none			&none			&none    		&none			&none
 &kp LGUI		&kp LALT		&kp LCTRL		&kp LSHFT		&none				&none			&none			&none    		&none			&none 
 &none	  		&none  			&none 	  		&none			&none	         		&none			&none			&none    		&none			&none 
 						&trans			&trans			&trans  			&mkp RCLK		&mkp LCLK    		&mkp MCLK
             >;
         };
+
+	grk {
+		bindings = <
+&kp Z			&kp C			&kp W			&kp P			&kp V				&kp H			&kp Y			&kp O			&kp K			&kp Q
+&thml LGUI R		&thml LALT S		&thml LCTRL N		&thml LSHFT T		&per_com			&kp APOS		&thmr RSHFT U		&thmr RCTRL E		&thmr RALT A		&thmr RGUI I
+&lt MSE X		&kp M			&kp L			&kp D			&kp SEMI			&exc_que		&kp F			&kp J			&kp G			&kp B
+						&lt NUM ENTER		&lt SYM SPACE		&lt NAV TAB			&lt NAV DEL 		&lt SYM BSPC		&lt FXN ESC
+            >;
+        };
+
     };
 };
