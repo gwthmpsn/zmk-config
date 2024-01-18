@@ -172,6 +172,11 @@
 			key-positions = <13 16>;
 			bindings = <&caps_word>;
 			};
+		combo_greek_sticky_layer {
+			timeout-ms = <30>;
+			key-positions = <31 34>;
+			bindings = <&sl 6>;
+			};
 	};
 	behaviors {
 		per_com: per_com {								// . ,
@@ -283,10 +288,10 @@
 
 	grk {
 		bindings = <
-&kp Z			&kp C			&kp W			&kp P			&kp V				&kp H			&kp Y			&kp O			&kp K			&kp Q
-&thml LGUI R		&thml LALT S		&thml LCTRL N		&thml LSHFT T		&per_com			&kp APOS		&thmr RSHFT U		&thmr RCTRL E		&thmr RALT A		&thmr RGUI I
-&lt MSE X		&kp M			&kp L			&kp D			&kp SEMI			&exc_que		&kp F			&kp J			&kp G			&kp B
-						&lt NUM ENTER		&lt SYM SPACE		&lt NAV TAB			&lt NAV DEL 		&lt SYM BSPC		&lt FXN ESC
+&el_zeta		&el_chi			&el_omega		&el_pi			&none				&none			&el_upsilon		&el_omikron		&el_kappa		&el_psi
+&el_rho			&el_sigma		&el_nu			&el_theta		&none				&none			&el_tau			&el_epsilon		&el_alpha		&el_iota
+&el_xi			&el_mu			&el_lambda		&el_delta		&none				&none			&el_phi			&el_eta			&el_gamma		&el_beta
+						&none			&none			&none				&none	 		&none			&none
             >;
         };
 
