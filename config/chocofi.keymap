@@ -24,36 +24,6 @@
 				, <&macro_release &kp LALT>
 				;
 		};
-		cut: cut {
-			label = "cut";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-				= <&macro_press   &kp LCTRL>
-				, <&macro_tap     &kp X>
-				, <&macro_release &kp LCTRL>
-				;
-		};
-		cpy: cpy {
-			label = "cpy";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-				= <&macro_press   &kp LCTRL>
-				, <&macro_tap     &kp C>
-				, <&macro_release &kp LCTRL>
-				;
-		};
-		pst: pst {
-			label = "pst";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-				= <&macro_press   &kp LCTRL>
-				, <&macro_tap     &kp V>
-				, <&macro_release &kp LCTRL>
-				;
-		};
 		udo: udo {
 			label = "udo";
 			compatible = "zmk,behavior-macro";
@@ -197,14 +167,6 @@
 			};
 	};
 	behaviors {
-		mo_tog: behavior_mo_tog {
-			compatible = "zmk,behavior-hold-tap";
-			label = "mo_tog";
-			#binding-cells = <2>;
-			flavor = "hold-preferred";
-			tapping-term-ms = <200>;
-			bindings = <&mo>, <&tog>;
-		};
 		per_com: per_com {								// . ,
 			compatible = "zmk,behavior-mod-morph";
 			label = "per_com";
@@ -219,67 +181,34 @@
 			bindings = <&kp EXCL>, <&kp QMARK>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-		ast_car: ast_car {								// * ^
-			compatible = "zmk,behavior-mod-morph";
-			label = "ast_car";
-			#binding-cells = <0>;
-			bindings = <&kp ASTRK>, <&kp CARET>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-		fsl_bsl: fsl_bsl {								// Forward and Back Slashes
-			compatible = "zmk,behavior-mod-morph";
-			label = "fsl_bsl";
-			#binding-cells = <0>;
-			bindings = <&kp FSLH>, <&kp BSLH>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-		tab_etr: tab_enter {							// TAB ENTER
-			compatible = "zmk,behavior-mod-morph";
-			label = "TAB_ENTER";
-			#binding-cells = <0>;
-			bindings = <&kp TAB>, <&kp ENTER>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-		bsp_del: bspc_del {							// BSPC DEL
-			compatible = "zmk,behavior-mod-morph";
-			label = "bspc_del";
-			#binding-cells = <0>;
-			bindings = <&kp BSPC>, <&kp DEL>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-		lt_tab_ent: layer_tap_tab_enter {								// I want this to be space, enter, or layer
-			compatible = "zmk,behavior-hold-tap";
-		    	label = "LAYER_TAP_TAB_ENTER";
-		    	#binding-cells = <2>;
-		    	bindings = <&mo>, <&tab_etr>;
-		    	tapping-term-ms = <200>;
-		};
-		lt_bsp_del: layer_tap_bspc_del {								// I want this to be bspc, del, or layer
-			compatible = "zmk,behavior-hold-tap";
-		    	label = "LAYER_TAP_BACKSPACE_DELETE";
-		    	#binding-cells = <2>;
-		    	bindings = <&mo>, <&bsp_del>;
-		    	tapping-term-ms = <200>;
-		};
 		hm: balanced_homerow_mods {
 			compatible = "zmk,behavior-hold-tap";
 			label = "HOMEROW_MODS";
 			#binding-cells = <2>;
-			tapping-term-ms = <200>;    // <---[[moderate duration, was 200]]
+			tapping-term-ms = <100>;
 			quick-tap-ms = <50>;
 			flavor = "balanced";
+			bindings = <&kp>, <&kp>;
+		};
+		rpi: require_prior_idle {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <200>;
+			quick-tap-ms = <200>;
+			require-prior-idle-ms = <125>;
 			bindings = <&kp>, <&kp>;
 		};
 		td_hm_t: tap_dance_homerow_mod_t {
 		            compatible = "zmk,behavior-tap-dance";
 		            #binding-cells = <0>;
-		            tapping-term-ms = <200>;
+		            tapping-term-ms = <300>;
 		            bindings = <&hm LSHIFT T>, <&caps_word>;
 		};
 		td_hm_u: tap_dance_homerow_mod_u {
 		            compatible = "zmk,behavior-tap-dance";
 		            #binding-cells = <0>;
-		            tapping-term-ms = <200>;
+		            tapping-term-ms = <300>;
 		            bindings = <&hm LSHIFT U>, <&caps_word>;
 		};
 	};
@@ -296,7 +225,7 @@
 //                             num	 sym	   nav			  nav	    sym	      fxn
         	bindings = <
 &kp Z			&kp C			&kp W			&kp P			&kp V				&kp H			&kp Y			&kp O			&kp K			&kp Q
-&hm LGUI R		&hm LALT S		&hm LCTRL N		&td_hm_t		&per_com			&kp APOS		&td_hm_u		&hm RCTRL E		&hm RALT A		&hm RGUI I
+&rpi LGUI R		&rpi LALT S		&rpi LCTRL N		&td_hm_t		&per_com			&kp APOS		&td_hm_u		&rpi RCTRL E		&rpi RALT A		&rpi RGUI I
 &lt MSE X		&kp M			&kp L			&kp D			&kp SEMI			&exc_que		&kp F			&kp J			&kp G			&kp B
 						&lt NUM ENTER		&lt SYM SPACE		&lt NAV TAB			&lt NAV DEL 		&lt SYM BSPC		&lt FXN ESC
             >;
@@ -306,7 +235,7 @@
         sym {
 		bindings = <
 &none			&kp AT			&kp HASH		&kp LBKT		&kp GRAVE			&deg			&kp RBKT		&kp DLLR     		&kp PRCNT     		&none
-&hm LGUI AMPS 		&hm LALT EQUAL		&hm LCTRL KP_PLUS 	&hm LSHFT LPAR 		&trans				&trans			&hm RSHFT RPAR 		&hm RCTRL KP_MINUS 	&hm RALT UNDER 		&hm RGUI PIPE
+&rpi LGUI AMPS 		&rpi LALT EQUAL		&rpi LCTRL KP_PLUS 	&hm LSHFT LPAR 		&trans				&trans			&hm RSHFT RPAR 		&rpi RCTRL KP_MINUS 	&rpi RALT UNDER 		&rpi RGUI PIPE
 &kp LT 			&kp CARET		&kp ASTRK		&kp LBRC		&trans				&trans 			&kp RBRC		&kp FSLH		&kp BSLH		&kp GT
 						&trans			&trans			&trans		  		&trans			&trans    		&trans
             >;
@@ -327,7 +256,7 @@
 	fxn {
         	bindings = <
 &kp F9			&kp F10			&kp F11    		&kp F12			&kp PSCRN      			&none    		&none			&none    		&none			&bt BT_CLR 
-&hm LGUI F5		&hm LALT F6		&hm LCTRL F7		&hm LSHFT F8		&kp INS				&none    		&none			&none    		&none			&none
+&rpi LGUI F5		&rpi LALT F6		&rpi LCTRL F7		&hm LSHFT F8		&kp INS				&none    		&none			&none    		&none			&none
 &kp F1  		&kp F2 			&kp F3 	  		&kp F4			&kp PAUSE_BREAK        		&none    		&none			&none    		&none			&none
 						&kp K_APP		&trans			&trans  			&trans			&trans    		&trans
             >;
