@@ -270,6 +270,18 @@
 			flavor = "balanced";
 			bindings = <&kp>, <&kp>;
 		};
+		td_hm_t: tap_dance_homerow_mod_t {
+		            compatible = "zmk,behavior-tap-dance";
+		            #binding-cells = <0>;
+		            tapping-term-ms = <200>;
+		            bindings = <&hm LSHIFT T>, <&caps_word>;
+		};
+		td_hm_u: tap_dance_homerow_mod_u {
+		            compatible = "zmk,behavior-tap-dance";
+		            #binding-cells = <0>;
+		            tapping-term-ms = <200>;
+		            bindings = <&hm LSHIFT U>, <&caps_word>;
+		};
 	};
 
 	keymap {
@@ -284,7 +296,7 @@
 //                             num	 sym	   nav			  nav	    sym	      fxn
         	bindings = <
 &kp Z			&kp C			&kp W			&kp P			&kp V				&kp H			&kp Y			&kp O			&kp K			&kp Q
-&hm LGUI R		&hm LALT S		&hm LCTRL N		&hm LSHFT T		&per_com			&kp APOS		&hm RSHFT U		&hm RCTRL E		&hm RALT A		&hm RGUI I
+&hm LGUI R		&hm LALT S		&hm LCTRL N		&td_hm_t		&per_com			&kp APOS		&td_hm_u		&hm RCTRL E		&hm RALT A		&hm RGUI I
 &lt MSE X		&kp M			&kp L			&kp D			&kp SEMI			&exc_que		&kp F			&kp J			&kp G			&kp B
 						&lt NUM ENTER		&lt SYM SPACE		&lt NAV TAB			&lt NAV DEL 		&lt SYM BSPC		&lt FXN ESC
             >;
