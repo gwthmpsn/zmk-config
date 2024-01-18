@@ -295,7 +295,7 @@
 		bindings = <
 &none			&kp AT			&kp HASH		&kp LBKT		&kp GRAVE			&deg			&kp RBKT		&kp DLLR     		&kp PRCNT     		&none
 &hm LGUI AMPS 		&hm LALT EQUAL		&hm LCTRL KP_PLUS 	&hm LSHFT LPAR 		&trans				&trans			&hm RSHFT RPAR 		&hm RCTRL KP_MINUS 	&hm RALT UNDER 		&hm RGUI PIPE
-&kp LT 			&kp CARET		&kp ASTRK		&kp LBRC		&trans				&trans 			&kp RBRC		&kp FLSH		&kp BLSH		&kp GT
+&kp LT 			&kp CARET		&kp ASTRK		&kp LBRC		&trans				&trans 			&kp RBRC		&kp FSLH		&kp BSLH		&kp GT
 						&trans			&trans			&trans		  		&trans			&trans    		&trans
             >;
         };
