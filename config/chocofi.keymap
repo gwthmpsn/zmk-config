@@ -319,7 +319,7 @@
 &bt BT_CLR		&none			&none    		&none			&none        			&kp KP_SLASH   		&kp N7			&kp N8    		&kp N9			&kp KP_MINUS 
 &kp LGUI		&kp LALT		&kp LCTRL		&kp LSHFT		&none				&kp ASTRK		&kp N4			&kp N5			&kp N6			&kp KP_PLUS
 &none	  		&none  			&none 	  		&none			&none	         		&none	 		&kp N1			&kp N2			&kp N3			&kp ENTER
-						&trans			&trans			&trans  			&trans			&kp N0    		&kp KP_DOT
+						&trans			&trans			&trans  			&trans			&kp N0    		&kp PERIOD
             >;
         };
 
