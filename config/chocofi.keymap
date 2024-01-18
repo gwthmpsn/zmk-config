@@ -127,22 +127,22 @@
 		compatible = "zmk,combos";
 		combo_ch {
 			timeout-ms = <30>;
-			key-positions = <1 2>;
+			key-positions = <0 1>;
 			bindings = <&ch>;
 			};
 		combo_wh {
 			timeout-ms = <30>;
-			key-positions = <2 3>;
+			key-positions = <1 2>;
 			bindings = <&wh>;
 			};
 		combo_ph {
 			timeout-ms = <30>;
-			key-positions = <3 12>;
+			key-positions = <2 3>;
 			bindings = <&ph>;
 			};
 		combo_sh {
 			timeout-ms = <30>;
-			key-positions = <11 12>;
+			key-positions = <10 11>;
 			bindings = <&sh>;
 			};
 		combo_th {
@@ -152,18 +152,23 @@
 			};
 		combo_gh {
 			timeout-ms = <30>;
-			key-positions = <27 28>;
+			key-positions = <28 29>;
 			bindings = <&gh>;
 			};
 		combo_qu {
 			timeout-ms = <30>;
-			key-positions = <16 17>;
+			key-positions = <8 9>;
 			bindings = <&qu>;
 			};
 		combo_ing {
 			timeout-ms = <30>;
 			key-positions = <18 19>;
 			bindings = <&ing>;
+			};
+		combo_caps_word {
+			timeout-ms = <30>;
+			key-positions = <13 16>;
+			bindings = <&caps_word>;
 			};
 	};
 	behaviors {
