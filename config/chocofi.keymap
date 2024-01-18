@@ -217,7 +217,7 @@
 		};
 		grk_lshft: greek_left_shift {
 			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <0>;
+			#binding-cells = <2>;
  			flavor = "balanced";
 			tapping-term-ms = <280>;
 			quick-tap-ms = <175>;
@@ -228,7 +228,7 @@
 		};
 		grk_rshft: greek_right_shift {
 			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <0>;
+			#binding-cells = <2>;
  			flavor = "balanced";
 			tapping-term-ms = <280>;
 			quick-tap-ms = <175>;
@@ -312,9 +312,9 @@
 	grk {
 		bindings = <
 &el_zeta		&el_chi			&el_omega		&el_pi			&none				&none			&el_upsilon		&el_omikron		&el_kappa		&el_psi
-&el_rho			&el_sigma		&el_nu			&grk_lshft		&trans				&trans			&grk_rshft		&el_epsilon		&el_alpha		&el_iota
+&el_rho			&el_sigma		&el_nu			&grk_lshft 0 0		&trans				&trans			&grk_rshft 0 0		&el_epsilon		&el_alpha		&el_iota
 &el_xi			&el_mu			&el_lambda		&el_delta		&trans				&trans			&el_phi			&el_eta			&el_gamma		&el_beta
-						&trans			&trans			&trans				&trans	 		&trans			&to 1
+						&trans			&trans			&trans				&trans	 		&trans			&to 0
             >;
         };
 
