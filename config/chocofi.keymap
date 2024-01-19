@@ -46,6 +46,16 @@
 				, <&macro_release &kp LCTRL>
 				;
 		};
+		altf4: altf4 {
+			label = "altf4";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_press   &kp LALT>
+				, <&macro_tap     &kp F4>
+				, <&macro_release &kp LALT>
+				;
+		};
 		th: th {
 			label = "th";
 			compatible = "zmk,behavior-macro";
@@ -168,7 +178,7 @@
 			bindings = <&ing>;
 			};
 		combo_caps_word {
-			timeout-ms = <30>;
+			timeout-ms = <50>;
 			key-positions = <13 16>;
 			bindings = <&caps_word>;
 			};
@@ -176,6 +186,11 @@
 			timeout-ms = <30>;
 			key-positions = <31 34>;
 			bindings = <&to 6>;
+			};
+		combo_alt_f4 {
+			timeout-ms = <30>;
+			key-positions = <4 30>;
+			bindings = <&altf4>;
 			};
 	};
 	behaviors {
@@ -252,8 +267,8 @@
         	bindings = <
 &kp Z			&kp C			&kp W			&kp P			&kp V				&kp H			&kp Y			&kp O			&kp K			&kp Q
 &thml LGUI R		&thml LALT S		&thml LCTRL N		&thml LSHFT T		&per_com			&kp APOS		&thmr RSHFT U		&thmr RCTRL E		&thmr RALT A		&thmr RGUI I
-&lt MSE X		&kp M			&kp L			&kp D			&kp SEMI			&exc_que		&kp F			&kp J			&kp G			&kp B
-						&lt NUM ENTER		&lt SYM SPACE		&lt NAV TAB			&lt NAV DEL 		&lt SYM BSPC		&lt FXN ESC
+&kp X			&kp M			&kp L			&kp D			&kp SEMI			&exc_que		&kp F			&kp J			&kp G			&kp B
+						&lt MSE ENTER		&lt SYM SPACE		&lt NAV TAB			&lt NUM DEL 		&lt SYM BSPC		&lt FXN ESC
             >;
         };
 
@@ -271,19 +286,19 @@
 	// Numpad layer
 	num {
         	bindings = <
-&bt BT_CLR		&none			&none    		&none			&none        			&kp KP_SLASH   		&kp N7			&kp N8    		&kp N9			&kp KP_MINUS 
-&kp LGUI		&kp LALT		&kp LCTRL		&kp LSHFT		&none				&kp ASTRK		&kp N4			&kp N5			&kp N6			&kp KP_PLUS
-&none	  		&none  			&none 	  		&none			&none	         		&none	 		&kp N1			&kp N2			&kp N3			&kp ENTER
-						&trans			&trans			&trans  			&trans			&kp N0    		&kp PERIOD
+&kp KP_SLASH   		&kp N7			&kp N8    		&kp N9			&kp KP_MINUS 			&none			&none    		&none			&none        		&bt BT_CLR	
+&kp ASTRK		&kp N4			&kp N5			&kp N6			&kp KP_PLUS			&none			&kp RSHFT		&kp RCTRL		&kp RALT		&kp RGUI		
+&none	 		&kp N1			&kp N2			&kp N3			&none				&none	  		&none  			&none 	  		&none			&none	         		
+						&trans			&kp N0    		&kp PERIOD			&trans			&trans			&trans 
             >;
         };
 
 	// Function key layer
 	fxn {
         	bindings = <
-&kp F9			&kp F10			&kp F11    		&kp F12			&kp PSCRN      			&none    		&none			&none    		&none			&bt BT_CLR 
-&thml LGUI F5		&thml LALT F6		&thml LCTRL F7		&thml LSHFT F8		&kp INS				&none    		&none			&none    		&none			&none
-&kp F1  		&kp F2 			&kp F3 	  		&kp F4			&kp PAUSE_BREAK        		&none    		&none			&none    		&none			&none
+&kp F12			&kp F7			&kp F8    		&kp F9			&kp PSCRN      			&none    		&none			&none    		&none			&bt BT_CLR 
+&kp F11			&kp F4			&kp F5			&kp F6			&kp INS				&none    		&kp RSHFT		&kp RCTRL		&kp RALT		&kp RGUI
+&kp F10  		&kp F1 			&kp F2 	  		&kp F3			&kp PAUSE_BREAK        		&none    		&none			&none    		&none			&none
 						&kp K_APP		&trans			&trans  			&trans			&trans    		&trans
             >;
         };
