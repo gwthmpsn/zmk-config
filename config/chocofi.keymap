@@ -12,6 +12,7 @@
 #define NAV	4
 #define MSE	5
 #define GRK	6
+#define LOL	7
 
 / {
 	macros {
@@ -192,7 +193,12 @@
 			key-positions = <4 30>;
 			bindings = <&altf4>;
 			};
-	};
+		combo_lol {
+			timeout-ms = <30>;
+			key-positions = <20 29>;
+			bindings = <&to 7>;
+			};
+		};
 	behaviors {
 		per_com: per_com {								// . ,
 			compatible = "zmk,behavior-mod-morph";
@@ -225,7 +231,6 @@
  			flavor = "balanced";
 			tapping-term-ms = <280>;
 			quick-tap-ms = <175>;                // repeat on tap-into-hold
-			require-prior-idle-ms = <50>;
 			bindings = <&kp>, <&kp>;
 			hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 30 31 32 33 34 35>;
 			hold-trigger-on-release;             // delay positional check until key-release
@@ -247,7 +252,6 @@
  			flavor = "balanced";
 			tapping-term-ms = <280>;
 			quick-tap-ms = <175>;                // repeat on tap-into-hold
-			require-prior-idle-ms = <50>;
 			bindings = <&kp>, <&kp>;
 			hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33 34 35>;
 			hold-trigger-on-release;             // delay positional check until key-release
@@ -354,6 +358,14 @@
 						&trans			&trans			&trans				&trans	 		&trans			&to 0
             >;
         };
-
+	// League of Legends Layer
+	lol {
+		bindings = <
+&kp TAB			&kp N1			&kp N2			&kp N3			&kp N4				&none			&none			&none			&none			&none
+&kp LSHFT		&kp Q			&kp W			&kp E			&kp R				&none			&none			&none			&none			&none
+&kp LCTRL		&kp P			&kp S			&kp D			&kp F				&none			&none			&none			&none			&none
+						&kp Z			&kp G			&kp H				&none	 		&none			&to 0
+            >;
+        };
     };
 };
