@@ -291,9 +291,9 @@
 //           		   |   ETR   |   SPC   |   TAB   |            |   DEL   |   BSP   |   SYM   |
 //                             num	 sym	   nav			  nav	    sym	      fxn
         	bindings = <
-&kp Z			&kp C			&kp W			&kp P			&kp V				&kp H			&kp Y			&kp O			&kp K			&kp Q
-&thml LGUI R		&thml LALT S		&thml LCTRL N		&thmls LSHFT T		&per_com			&kp APOS		&thmrs RSHFT U		&thmr RCTRL E		&thmr RALT A		&thmr RGUI I
-&kp X			&kp M			&kp L			&kp D			&kp SEMI			&exc_que		&kp F			&kp J			&kp G			&kp B
+&kp Q			&kp W			&kp E			&kp R			&kp T				&kp Y			&kp U			&kp I			&kp O			&kp P
+&thml LGUI A		&thml LALT S		&thml LCTRL D		&thmls LSHFT F		&kp G				&kp H			&thmrs RSHFT J		&thmr RCTRL K		&thmr RALT L		&thmr RGUI SEMI
+&kp Z			&kp X			&kp C			&kp V			&kp B				&kp N			&kp M			&kp COMMA		&kp PERIOD		&kp FSLH
 						&lt MSE ENTER		&lt SYM SPACE		&lt NAV TAB			&lt NUM DEL 		&lt SYM BSPC		&lt FXN ESC
             >;
         };
