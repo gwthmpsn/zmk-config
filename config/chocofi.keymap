@@ -301,9 +301,9 @@
 	// Symbolic layer
         sym {
 		bindings = <
-&none			&kp AT			&kp HASH		&kp LBKT		&kp GRAVE			&deg			&kp RBKT		&kp DLLR     		&kp PRCNT     		&none
-&thml LGUI AMPS		&thml LALT EQUAL	&thml LCTRL KP_PLUS 	&thml LSHFT LPAR	&trans				&trans			&thmr RSHFT RPAR	&thmr RCTRL KP_MINUS 	&thmr RALT UNDER	&thmr RGUI PIPE
-&kp LT 			&kp CARET		&kp ASTRK		&kp LBRC		&trans				&trans 			&kp RBRC		&kp FSLH		&kp BSLH		&kp GT
+&kp GRAVE		&kp AT			&kp HASH		&kp LBKT		&none				&none			&kp RBKT		&kp DLLR     		&kp PRCNT     		&deg
+&thml LGUI AMPS		&thml LALT EQUAL	&thml LCTRL KP_PLUS 	&thml LSHFT LPAR	&none				&none			&thmr RSHFT RPAR	&thmr RCTRL KP_MINUS 	&thmr RALT UNDER	&thmr RGUI PIPE
+&kp LT 			&kp CARET		&kp ASTRK		&kp LBRC		&none				&none 			&kp RBRC		&kp FSLH		&kp BSLH		&kp GT
 						&trans			&trans			&trans		  		&trans			&trans    		&trans
             >;
         };
@@ -323,8 +323,8 @@
 	fxn {
         	bindings = <
 &kp F12			&kp F7			&kp F8    		&kp F9			&kp PSCRN      			&none    		&none			&none    		&none			&none	 
-&kp F11			&kp F4			&kp F5			&kp F6			&kp INS				&BT_NXT    		&kp RSHFT		&kp RCTRL		&kp RALT		&kp RGUI
-&kp F10  		&kp F1 			&kp F2 	  		&kp F3			&kp PAUSE_BREAK        		&BT_CLR    		&none			&none    		&none			&none
+&kp F11			&kp F4			&kp F5			&kp F6			&kp INS				&bt BT_NXT    		&kp RSHFT		&kp RCTRL		&kp RALT		&kp RGUI
+&kp F10  		&kp F1 			&kp F2 	  		&kp F3			&kp PAUSE_BREAK        		&bt BT_CLR    		&none			&none    		&none			&none
 						&kp K_APP		&trans			&trans  			&trans			&trans    		&trans
             >;
         };
